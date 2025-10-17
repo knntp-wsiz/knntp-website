@@ -1,0 +1,18 @@
+# Default: allow everything
+User-agent: *
+Allow: /
+
+# Block Next.js internals (not useful for indexing)
+Disallow: /_next/
+Disallow: /_next/static/
+Disallow: /_next/image
+Disallow: /_next/data/
+
+# Block API and server-only routes
+Disallow: /api/
+
+# Reduce crawl of tracking-parameter URLs
+Disallow: /*?*utm_*
+Disallow: /*?*gclid=*
+Disallow: /*?*fbclid=*
+Disallow: /*?*msclkid=*
