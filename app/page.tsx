@@ -9,14 +9,14 @@ export default function Home() {
 				src="/logo_white.png"
 				alt="KNNTP Logo"
 				width={500}
-				height={500}
+				height={253.906}
 				className="hidden dark:block"
 			/>
 			<Image
 				src="/logo_black.png"
 				alt="KNNTP Logo"
 				width={500}
-				height={500}
+				height={253.906}
 				className="dark:hidden"
 			/>
 			<p className="text-xl">
