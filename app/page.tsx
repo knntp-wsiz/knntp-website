@@ -4,7 +4,7 @@ import { FaFacebook } from "react-icons/fa";
 
 export default function Home() {
 	return (
-		<main className="flex min-h-svh items-center flex-col justify-center max-w-4xl text-center mx-auto p-8">
+		<div className="flex flex-1 flex-col items-center justify-center">
 			<Image
 				src="/logo_white.png"
 				alt="KNNTP Logo"
