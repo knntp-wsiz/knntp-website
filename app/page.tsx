@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook } from "react-icons/fa";
+import { FaDiscord, FaFacebook, FaGithub } from "react-icons/fa";
 
 export default function Home() {
 	return (
@@ -19,18 +19,38 @@ export default function Home() {
 				height={253.906}
 				className="dark:hidden"
 			/>
-			<p className="text-xl">
+			<p className="text-xl text-center">
 				Oficjalna strona koła naukowego nowych technologii programistycznych
 			</p>
-			<Link
-				href="https://www.facebook.com/netRzeszow/"
-				target="_blank"
-				rel="noopener noreferrer"
-				aria-label="Nasz profil na Facebook'u"
-				className="mt-8"
-			>
-				<FaFacebook className="h-12 w-12" />
-			</Link>
-		</main>
+			<div className="flex justify-center space-x-4 mt-4">
+				<Link
+					href="https://www.facebook.com/netRzeszow/"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Nasz profil na Facebook'u"
+					className="hover:text-primary transition-colors duration-150 ease-in-out"
+				>
+					<FaFacebook className="h-12 w-12" />
+				</Link>
+				<Link
+					href="https://discord.gg/"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Nasz serwer na Discordzie"
+					className="hover:text-primary transition-colors duration-150 ease-in-out"
+				>
+					<FaDiscord className="h-12 w-12" />
+				</Link>
+				<Link
+					href="https://github.com/knntp-wsiz"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Nasz profil na GitHubie"
+					className="hover:text-primary transition-colors duration-150 ease-in-out"
+				>
+					<FaGithub className="h-12 w-12" />
+				</Link>
+			</div>
+		</div>
 	);
 }
