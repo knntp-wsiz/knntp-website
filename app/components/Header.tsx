@@ -114,7 +114,7 @@ function NavLink({
 			href={href}
 			className={clsx(
 				"transition-colors relative group hover:text-secondary block rounded-md text-base duration-150 ease-in-out",
-				isActive ? "text-secondary font-semibold" : "text-primary",
+				isActive ? "text-accent font-semibold" : "text-primary",
 			)}
 			role="menuitem"
 			onClick={onClick}
