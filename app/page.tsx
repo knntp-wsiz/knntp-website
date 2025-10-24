@@ -50,7 +50,7 @@ export default function Home() {
 					<FaFacebook className="h-12 w-12" />
 				</Link>
 				<Link
-					href="https://discord.gg/"
+					href="https://discord.gg/QBTCtum5uw"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="Nasz serwer na Discordzie"
