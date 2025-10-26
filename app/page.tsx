@@ -7,18 +7,11 @@ export default function Home() {
 		<div className="flex flex-1 flex-col items-center justify-center">
 			<div className="flex justify-center items-center flex-col lg:flex-row">
 				<Image
-					src="/wsiz_logo_white.png"
+					src="/wsiz/PL_mono_main.svg"
 					alt="WSIiZ Logo"
 					width={491}
 					height={100}
-					className="hidden dark:block"
-				/>
-				<Image
-					src="/wsiz_logo_black.png"
-					alt="WSIiZ Logo"
-					width={491}
-					height={100}
-					className="dark:hidden"
+					className="dark:invert"
 				/>
 
 				<Image
