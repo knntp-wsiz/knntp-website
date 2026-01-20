@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaDiscord, FaFacebook, FaGithub } from "react-icons/fa";
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
+
+	const t = useTranslations(); // Tłumaczenia
+
 	return (
 		<div className="flex flex-1 flex-col items-center justify-center">
 			<div className="flex justify-center items-center flex-col lg:flex-row">
@@ -36,8 +40,8 @@ export default function Home() {
 				<Link
 					href="https://www.facebook.com/netRzeszow/"
 					target="_blank"
-					rel="noopener noreferrer"
-					aria-label="Nasz profil na Facebook'u"
+					rel="noopener noreferrer"	
+					aria-label={t('Socials.facebook')}
 					className="hover:text-primary transition-colors duration-150 ease-in-out"
 				>
 					<FaFacebook className="h-12 w-12" />
@@ -46,7 +50,7 @@ export default function Home() {
 					href="https://discord.gg/QBTCtum5uw"
 					target="_blank"
 					rel="noopener noreferrer"
-					aria-label="Nasz serwer na Discordzie"
+					aria-label={t('Socials.discord')}
 					className="hover:text-primary transition-colors duration-150 ease-in-out"
 				>
 					<FaDiscord className="h-12 w-12" />
@@ -55,7 +59,7 @@ export default function Home() {
 					href="https://github.com/knntp-wsiz"
 					target="_blank"
 					rel="noopener noreferrer"
-					aria-label="Nasz profil na GitHubie"
+					aria-label={t('Socials.github')}
 					className="hover:text-primary transition-colors duration-150 ease-in-out"
 				>
 					<FaGithub className="h-12 w-12" />

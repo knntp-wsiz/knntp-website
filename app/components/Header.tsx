@@ -1,16 +1,23 @@
 "use client";
 import clsx from "clsx";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from '@/i18n/navigation'; //dev: nastąpiła podmiana z 'import Link from 'next/link';'
 import { usePathname } from "next/navigation";
 import { useId, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './LangSwitcher';
 
-const NAV_ITEMS = [{ name: "Strona główna", path: "/" }];
+
+
 
 export default function Header() {
+	
+	const t = useTranslations(); // Tłumaczenia
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const mobileMenuId = useId();
+
+	const NAV_ITEMS = [{ name: t('Header.mainp-label'), path: "/" }];
 
 	const toggleMenu = (): void => {
 		setIsOpen((prev) => !prev);
@@ -24,7 +31,7 @@ export default function Header() {
 						<Link
 							href="/"
 							className="text-2xl font-bold"
-							aria-label="Strona główna"
+							aria-label={t('Header.mainp-label')}
 						>
 							<Image
 								src="/logo_white.png"
@@ -43,30 +50,36 @@ export default function Header() {
 						</Link>
 					</div>
 
-					<nav className="hidden md:block">
-						<ul className="ml-10 flex items-baseline space-x-6">
-							{NAV_ITEMS.map((item) => (
-								<li key={item.path} role="none">
-									<NavLink href={item.path}>{item.name}</NavLink>
-								</li>
-							))}
-						</ul>
-					</nav>
+					<div className="flex">
+						<div>
+							<LanguageSwitcher />
+						</div>	
+						
+						<nav className="hidden md:block">
+							<ul className="ml-10 flex items-baseline space-x-6">
+								{NAV_ITEMS.map((item) => (
+									<li key={item.path} role="none">
+										<NavLink href={item.path}>{item.name}</NavLink>
+									</li>
+								))}
+							</ul>
+						</nav>
 
-					<button
-						className="md:hidden hover:text-secondary cursor-pointer  transition duration-150 ease-in-out"
-						onClick={toggleMenu}
-						type="button"
-						aria-controls={mobileMenuId}
-						aria-expanded={isOpen}
-						aria-label={isOpen ? "Zamknij menu główne" : "Otwórz menu główne"}
-					>
-						{isOpen ? (
-							<AiOutlineClose className="h-6 w-6" />
-						) : (
-							<AiOutlineMenu className="h-6 w-6" />
-						)}
-					</button>
+						<button
+							className="md:hidden hover:text-secondary cursor-pointer  transition duration-150 ease-in-out"
+							onClick={toggleMenu}
+							type="button"
+							aria-controls={mobileMenuId}
+							aria-expanded={isOpen}
+							aria-label={isOpen ? t('Header.close-menu') : t('Header.open-menu')}
+						>
+							{isOpen ? (
+								<AiOutlineClose className="h-6 w-6" />
+							) : (
+								<AiOutlineMenu className="h-6 w-6" />
+							)}
+						</button>
+					</div>
 				</div>
 			</div>
 

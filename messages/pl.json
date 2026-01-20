@@ -1,0 +1,12 @@
+{
+    "Header": {
+        "mainp-label": "Strona główna",
+        "open-menu": "Otwórz menu główne",
+        "close-menu": "Zamknij menu główne"
+    },
+    "Socials": {
+        "facebook": "Nasz profil na Facebook'u",
+        "discord": "Nasz serwer na Discordzie",
+        "github": "Nasz profil na GitHubie"
+    }
+}

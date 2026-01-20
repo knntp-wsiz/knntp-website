@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import "./globals.css";
+import '../globals.css';
 import Header from "@/app/components/Header";
+import { locales } from '@/i18n/config';
+import { notFound } from "next/navigation";
+import { getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
 const roboto = Roboto({
 	variable: "--font-roboto",
@@ -84,20 +88,31 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function RootLayout({
-	children,
+export default async function RootLayout({
+	children, params
 }: Readonly<{
 	children: React.ReactNode;
+	params: Promise<{ locale: string }>;
 }>) {
+	const { locale } = await params;
+
+	if (!locales.includes(locale as any)) {
+    notFound();
+	}
+
+	const messages = await getMessages();
+	
 	return (
-		<html lang="pl">
+		<html lang={locale}>
 			<body
 				className={`${roboto.variable} antialiased min-h-svh flex flex-col`}
 			>
-				<Header />
-				<main className="max-w-7xl w-full mx-auto flex-1 p-8 flex">
-					{children}
-				</main>
+				<NextIntlClientProvider messages={messages}>
+					<Header />
+					<main className="max-w-7xl w-full mx-auto flex-1 p-8 flex">
+						{children}
+					</main>
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);
