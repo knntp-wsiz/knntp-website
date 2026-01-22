@@ -2,7 +2,8 @@
     "Header": {
         "mainp-label": "Home page",
         "open-menu": "Open main menu",
-        "close-menu": "Close main menu"
+        "close-menu": "Close main menu",
+        "lang-change": "Change language"
     },
     "Socials": {
         "facebook": "Our Facebook profile",

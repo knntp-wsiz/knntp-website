@@ -1,12 +1,25 @@
 {
     "Header": {
         "mainp-label": "Strona główna",
+        "about-label": "O nas",
+        "guide-label": "Przewodnik",
         "open-menu": "Otwórz menu główne",
-        "close-menu": "Zamknij menu główne"
+        "close-menu": "Zamknij menu główne",
+        "lang-change": "Zmień język"
     },
     "Socials": {
         "facebook": "Nasz profil na Facebook'u",
         "discord": "Nasz serwer na Discordzie",
         "github": "Nasz profil na GitHubie"
+    },
+    "About": {
+        "title": "Kim jesteśmy?",
+        "titledesc": "Koło zrzesza pasjonatów programowania i nowych technologii.",
+        "about": "Czym się zajmujemy?",
+        "aboutdesc": "Na spotkaniach koła zajmujemy się szkoleniami i podnoszeniem swoich umiejętności, a także realizacją ciekawych projektów i startami w konkursach. Działalność koła skupia się na poszerzaniu wiedzy w zakresie języków programowania, m.in. C++, C#, Java, oraz technologii takich jak .NET. Zajmujemy się także robotyką, VR, tworzeniem gier komputerowych i grafiką komputerową. Nasi członkowie odnosili liczne sukcesy w hackathonach, konkursach technologicznych takich jak Imagine Cup oraz konkursach ministerialnych."
+    },
+    "Guide": {
+        "title": "Przewodnik",
+        "authortag-gulzat-yessen": "Materiały przygotowane przez Gulzat Yessen"
     }
 }

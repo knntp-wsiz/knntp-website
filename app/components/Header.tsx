@@ -13,11 +13,15 @@ import LanguageSwitcher from './LangSwitcher';
 
 export default function Header() {
 	
-	const t = useTranslations(); // Tłumaczenia
+	const t = useTranslations();
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const mobileMenuId = useId();
 
-	const NAV_ITEMS = [{ name: t('Header.mainp-label'), path: "/" }];
+	const NAV_ITEMS = [
+		{name: t('Header.mainp-label'), path: "/" },
+		{name: t('Header.about-label'), path: "/about" },
+		{name: t('Header.guide-label'), path: "/guide" },
+	];
 
 	const toggleMenu = (): void => {
 		setIsOpen((prev) => !prev);
@@ -55,7 +59,7 @@ export default function Header() {
 							<LanguageSwitcher />
 						</div>	
 						
-						<nav className="hidden md:block">
+						<nav className="hidden md:flex justify-center items-center"> {/* Nastąpiła podmiana z block an flex */}
 							<ul className="ml-10 flex items-baseline space-x-6">
 								{NAV_ITEMS.map((item) => (
 									<li key={item.path} role="none">
