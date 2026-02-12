@@ -1,7 +1,7 @@
 "use client";
 import clsx from "clsx";
 import Image from "next/image";
-import { Link } from '@/i18n/navigation'; //dev: nastąpiła podmiana z 'import Link from 'next/link';'
+import { Link } from '@/i18n/navigation';
 import { usePathname } from "next/navigation";
 import { useId, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
@@ -59,7 +59,7 @@ export default function Header() {
 							<LanguageSwitcher />
 						</div>	
 						
-						<nav className="hidden md:flex justify-center items-center"> {/* Nastąpiła podmiana z block an flex */}
+						<nav className="hidden md:flex justify-center items-center">
 							<ul className="ml-10 flex items-baseline space-x-6">
 								{NAV_ITEMS.map((item) => (
 									<li key={item.path} role="none">

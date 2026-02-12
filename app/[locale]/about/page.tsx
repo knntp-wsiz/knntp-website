@@ -2,20 +2,20 @@ import { useTranslations } from 'next-intl';
 
 export default function Home() {
 
-    const t = useTranslations("About");
+    const t = useTranslations("");
 
     return (
         <div className="flex flex-1 flex-col items-center justify-start">
             <h1 className="text-5xl font-bold text-white text-center mt-10 mb-15 max-w-4xl">
-                Koło Naukowe Nowych Technologii Programistycznych
+                {t("Main.name")}
             </h1>
             <div className="w-4xl mb-16">
                 <div className="max-w-3xl">
                     <h2 className="text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">
-                        {t("title")}
+                        {t("About.title")}
                     </h2>
                     <p className="mt-4 text-xl text-primary">
-                        {t("titledesc")}
+                        {t("About.titledesc")}
                     </p>
                 </div>
             </div>
@@ -25,10 +25,10 @@ export default function Home() {
             <div className="max-w-4xl grid gap-8 items-start justify-center mt-10">
                 <div>
                     <h3 className="text-center text-2xl font-bold text-primary mb-3">
-                        {t("about")}
+                        {t("About.about")}
                     </h3>
                     <p className="text-base text-primary leading-relaxed">
-                        {t("aboutdesc")}
+                        {t("About.aboutdesc")}
                     </p>
                 </div>
             </div>

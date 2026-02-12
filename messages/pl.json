@@ -7,10 +7,14 @@
         "close-menu": "Zamknij menu główne",
         "lang-change": "Zmień język"
     },
+    "Main": {
+        "banner": "Budujemy przyszłość IT",
+        "name": "Koło Naukowe Nowych Technologii Programistycznych"
+    },
     "Socials": {
-        "facebook": "Nasz profil na Facebook'u",
-        "discord": "Nasz serwer na Discordzie",
-        "github": "Nasz profil na GitHubie"
+        "facebook": "Śledź nasze wydarzenia",
+        "discord": "Dołącz do społeczności",
+        "github": "Sprawdź nasz kod"
     },
     "About": {
         "title": "Kim jesteśmy?",
@@ -18,8 +22,29 @@
         "about": "Czym się zajmujemy?",
         "aboutdesc": "Na spotkaniach koła zajmujemy się szkoleniami i podnoszeniem swoich umiejętności, a także realizacją ciekawych projektów i startami w konkursach. Działalność koła skupia się na poszerzaniu wiedzy w zakresie języków programowania, m.in. C++, C#, Java, oraz technologii takich jak .NET. Zajmujemy się także robotyką, VR, tworzeniem gier komputerowych i grafiką komputerową. Nasi członkowie odnosili liczne sukcesy w hackathonach, konkursach technologicznych takich jak Imagine Cup oraz konkursach ministerialnych."
     },
-    "Guide": {
-        "title": "Przewodnik",
-        "authortag-gulzat-yessen": "Materiały przygotowane przez Gulzat Yessen"
+    "resources": {
+        "title": "Baza Wiedzy",
+        "subtitle": "Klucz do sukcesu to nie tylko kod, ale też odpowiednie narzędzia. Oto lista certyfikatów i platform rekomendowanych przez KNNTP.",
+        "search_placeholder": "Szukaj certyfikatu lub narzędzia...",
+        "section_certs": "Ścieżki Certyfikacji",
+        "section_tools": "Narzędzia i Edukacja",
+        "no_results": "Brak wyników."
+    },
+    "certs": {
+        "aws_desc": "Wiodąca chmura na świecie. Podstawy i zaawansowane usługi.",
+        "ibm_desc": "Szeroki wachlarz szkoleń od AI po Cyberbezpieczeństwo.",
+        "google_desc": "Profesjonalne certyfikaty uznawane w branży.",
+        "cisco_desc": "Fundamenty sieci, bezpieczeństwa i IoT. Klasyka IT."
+    },
+    "tools": {
+        "github_pack": "Darmowe dostępy do profesjonalnych narzędzi (JetBrains, domeny i więcej). Obowiązkowe!",
+        "azure": "Kredyty na chmurę Microsoft i darmowe usługi dla studentów.",
+        "copilot": "Twój parowy programista AI. Przyspiesza pisanie kodu.",
+        "codeium": "Darmowa, świetna alternatywa dla Copilota.",
+        "welib": "Zasoby biblioteczne i edukacyjne.",
+        "fcc": "Najlepsze miejsce do nauki Webu za darmo.",
+        "coursera": "Kursy uniwersyteckie z całego świata.",
+        "edx": "Platforma edukacyjna założona przez Harvard i MIT."
     }
+
 }
