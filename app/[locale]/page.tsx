@@ -7,7 +7,7 @@ export default function Home() {
   const t = useTranslations();
 
   return (
-    <main className="min-h-screen w-full bg-[var(--background)] text-[var(--foreground)] relative flex flex-col items-center p-6 overflow-hidden">
+    <main className="w-full bg-[var(--background)] text-[var(--foreground)] relative flex flex-col items-center p-6 overflow-hidden">
 				{/* BANNER */}
 				<div className="text-center space-y-4 mt-20 md:mt-50">
 					<h1 className="text-4xl md:text-8xl font-bold tracking-tight">

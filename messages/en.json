@@ -1,13 +1,63 @@
 {
     "Header": {
-        "mainp-label": "Home page",
+        "mainp-label": "Home",
+        "about-label": "About us",
+        "guide-label": "Guide",
+        "library-label": "Library",
         "open-menu": "Open main menu",
         "close-menu": "Close main menu",
         "lang-change": "Change language"
     },
+    "Main": {
+        "banner": "Building the future of IT",
+        "name": "Scientific Circle of New Programming Technologies"
+    },
     "Socials": {
-        "facebook": "Our Facebook profile",
-        "discord": "Our Discord server",
-        "github": "Our GitHub profile"
+        "facebook": "Follow our events",
+        "discord": "Join the community",
+        "github": "Check out our code"
+    },
+    "About": {
+        "title": "Who are we?",
+        "titledesc": "The club brings together programming and new technology enthusiasts.",
+        "about": "What do we do?",
+        "aboutdesc": "During club meetings, we focus on training and improving our skills, as well as carrying out interesting projects and participating in competitions. The club's activities center around expanding knowledge in programming languages, including C++, C#, Java, and technologies such as .NET. We also deal with robotics, VR, video game development, and computer graphics. Our members have achieved numerous successes in hackathons, technology competitions like Imagine Cup, and ministerial competitions."
+    },
+    "resources": {
+        "title": "Knowledge Base",
+        "subtitle": "The key to success is not just code, but also the right tools. Here is a list of certificates and platforms recommended by KNNTP.",
+        "search_placeholder": "Search for a certificate or tool...",
+        "section_certs": "Certification Paths",
+        "section_tools": "Tools and Education",
+        "no_results": "No results."
+    },
+    "certs": {
+        "aws_desc": "World's leading cloud. Fundamentals and advanced services.",
+        "ibm_desc": "A wide range of training courses, from AI to Cybersecurity.",
+        "google_desc": "Professional certificates recognized in the industry.",
+        "cisco_desc": "Fundamentals of networking, security, and IoT. An IT classic."
+    },
+    "tools": {
+        "github_pack": "Free access to professional tools (JetBrains, domains, and more). A must-have!",
+        "azure": "Microsoft Cloud credits and free services for students.",
+        "copilot": "Your AI pair programmer. Speeds up writing code.",
+        "codeium": "A great, free alternative to Copilot.",
+        "welib": "Library and educational resources.",
+        "fcc": "The best place to learn Web development for free.",
+        "coursera": "University courses from all around the world.",
+        "edx": "An educational platform founded by Harvard and MIT."
+    },
+    "Tech": {
+        "title": "The Modern IT Landscape",
+        "subtitle": "The technology world is changing rapidly. Here is a comprehensive list of tools, languages, and frameworks that drive today's industry - from web applications to artificial intelligence.",
+        "web_desc": "A field divided into what the user sees (Frontend), and the logic and operations hidden on the server (Backend).",
+        "mobile_desc": "Creating applications for mobile phones. From native code for maximum performance, to time-saving cross-platform solutions.",
+        "db_desc": "The place where applications store information. Choosing the right database (from SQL to vector databases) depends strictly on the type of data today.",
+        "cloud_desc": "Technologies that allow applications to run stably on the internet, scale under load, and automate code deployment.",
+        "ai_desc": "The hottest category of recent years, driving the development of LLM-based assistants, image analysis, and advanced recommendation systems.",
+        "bigdata_desc": "Engineering of environments where there is so much data that it doesn't fit on a single computer and needs to be processed on the fly in a distributed manner.",
+        "gamedev_desc": "Designing interactive entertainment and virtual worlds – from indie mobile games to big-budget AAA productions.",
+        "embedded_desc": "Low-level programming of physical devices and IoT – from simple sensors, through drones, to systems embedded in cars.",
+        "desktop_desc": "Although many services have moved to the cloud, efficient applications installed directly on Windows, macOS, or Linux systems are still being created."
     }
 }

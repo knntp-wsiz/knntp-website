@@ -3,6 +3,7 @@
         "mainp-label": "Strona główna",
         "about-label": "O nas",
         "guide-label": "Przewodnik",
+        "library-label": "Biblioteka",
         "open-menu": "Otwórz menu główne",
         "close-menu": "Zamknij menu główne",
         "lang-change": "Zmień język"
@@ -45,6 +46,18 @@
         "fcc": "Najlepsze miejsce do nauki Webu za darmo.",
         "coursera": "Kursy uniwersyteckie z całego świata.",
         "edx": "Platforma edukacyjna założona przez Harvard i MIT."
-    }
-
+    },
+    "Tech": {
+        "title": "Krajobraz nowoczesnego IT",
+        "subtitle": "Świat technologii zmienia się błyskawicznie. Oto kompleksowe zestawienie narzędzi, języków i frameworków, które napędzają dzisiejszą branżę - od aplikacji webowych po sztuczną inteligencję.",
+        "web_desc": "Dziedzina, która dzieli się na to, co widzi użytkownik (Frontend), oraz logikę i operacje ukryte na serwerze (Backend).",
+        "mobile_desc": "Tworzenie aplikacji na telefony. Od natywnego kodu dla maksymalnej wydajności, po rozwiązania cross-platformowe oszczędzające czas.",
+        "db_desc": "Miejsce, w którym aplikacje przechowują informacje. Wybór odpowiedniej bazy (od SQL po wektorowe) zależy dziś ściśle od rodzaju danych.",
+        "cloud_desc": "Technologie pozwalające aplikacjom działać stabilnie w internecie, skalować się pod obciążeniem i automatyzować wdrażanie kodu.",
+        "ai_desc": "Najgorętsza kategoria ostatnich lat, napędzająca rozwój asystentów opartych na LLM, analizy obrazu i zaawansowanych systemów rekomendacji.",
+        "bigdata_desc": "Inżynieria środowisk, w których danych jest tak dużo, że nie mieszczą się na jednym komputerze i trzeba je przetwarzać w locie w sposób rozproszony.",
+        "gamedev_desc": "Projektowanie interaktywnej rozrywki i wirtualnych światów – od niezależnych gier mobilnych po wielkobudżetowe produkcje AAA.",
+        "embedded_desc": "Niskopoziomowe programowanie urządzeń fizycznych i IoT – od prostych czujników, przez drony, aż po systemy wbudowane w samochodach.",
+        "desktop_desc": "Choć wiele usług przeniosło się do chmury, wciąż tworzy się wydajne aplikacje instalowane bezpośrednio na systemach Windows, macOS czy Linux."
+  }
 }

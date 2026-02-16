@@ -21,6 +21,7 @@ export default function Header() {
 		{name: t('Header.mainp-label'), path: "/" },
 		{name: t('Header.about-label'), path: "/about" },
 		{name: t('Header.guide-label'), path: "/guide" },
+		{name: t('Header.library-label'), path: "/library" },
 	];
 
 	const toggleMenu = (): void => {
