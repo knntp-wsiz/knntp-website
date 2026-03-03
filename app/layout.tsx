@@ -11,11 +11,11 @@ const roboto = Roboto({
 export const metadata: Metadata = {
 	// === Podstawowe Meta Tagi (SEO) ===
 	title: {
-		default: "Koło Naukowe Nowych Technologii Programistycznych WSIiZ",
+		default: "Koło Naukowe Nowych Technologii Programistycznych WSIiZ w Rzeszowie",
 		template: "%s | KNNTP WSIiZ", // Dla podstron (np. 'Projekty | KNNTP WSIiZ')
 	},
 	description:
-		"Nie tylko studia! Zwiększ umiejętności w C++, C#, Java i .NET. Realizuj projekty, bierz udział w hackathonach i konkursach. Dołącz do nas już dziś!",
+		"Nie tylko studia! Zwiększ umiejętności w Web Dev (React), C++, C# i .NET. Realizuj projekty, bierz udział w hackathonach i konkursach. Dołącz do nas już dziś!",
 
 	// === Dane o Właścicielu i Adresie URL ===
 	metadataBase: new URL("https://knntp.pl"), // Zastąp rzeczywistym adresem
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
 
 	// === Tagi Open Graph (Udostęnianie w Social Media - FB, LinkedIn) ===
 	openGraph: {
-		title: "Koło Naukowe Nowych Technologii Programistycznych WSIiZ",
+		title: "Koło Naukowe Nowych Technologii Programistycznych WSIiZ w Rzeszowie",
 		description:
-			"Nie tylko studia! Zwiększ umiejętności w C++, C#, Java i .NET. Realizuj projekty, bierz udział w hackathonach i konkursach. Dołącz do nas już dziś!",
+			"Nie tylko studia! Zwiększ umiejętności w Web Dev (React), C++, C# i .NET. Realizuj projekty, bierz udział w hackathonach i konkursach. Dołącz do nas już dziś!",
 		url: "https://knntp.pl",
 		siteName: "KNNTP WSIiZ",
 		images: [
