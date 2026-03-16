@@ -4,7 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { FaAws, FaGoogle, FaGithub, FaMicrosoft, FaSearch, FaExternalLinkAlt, FaBook, FaServer} from "react-icons/fa";
-import { SiCisco, SiCoursera, SiEdx, SiFreecodecamp, SiCodeium } from "react-icons/si";
+import { SiCisco, SiCoursera, SiEdx, SiFreecodecamp } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 
 const certProviders = [
   {
@@ -94,7 +95,7 @@ const tools = [
     id: "codeium",
     title: "Codeium",
     category: "AI Tool",
-    icon: <SiCodeium className="text-green-500" />,
+    icon: <VscVscode className="text-green-500" />,
     url: "https://codeium.com/",
     descKey: "tools.codeium"
   },
