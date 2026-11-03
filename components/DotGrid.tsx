@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { hasSeenIntro } from "@/lib/intro";
 
 const GAP = 30;
 const RADIUS = 190;
@@ -48,6 +49,7 @@ export default function DotGrid({ className }: { className?: string }) {
 		let targetStrength = 0;
 		let px = -1000;
 		let py = -1000;
+		const skipIntro = reduced.matches || hasSeenIntro();
 		let started = performance.now();
 
 		const resize = () => {
@@ -69,7 +71,7 @@ export default function DotGrid({ className }: { className?: string }) {
 			frameId = 0;
 			ctx.clearRect(0, 0, width, height);
 
-			const elapsed = reduced.matches ? INTRO_MS : now - started;
+			const elapsed = skipIntro ? INTRO_MS : now - started;
 			const introDone = elapsed >= INTRO_MS;
 			const progress = Math.min(elapsed / INTRO_MS, 1);
 			const maxDist = Math.hypot(width, height);

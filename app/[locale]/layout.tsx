@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { isLocale, LOCALES, type Locale } from "@/i18n/config";
 import { format, getMessages } from "@/i18n/messages";
+import { INTRO_BOOT_SCRIPT } from "@/lib/intro";
 import { alternates, openGraph } from "@/lib/seo";
 import { DISCORD_URL, GITHUB_ORG_URL, SITE_URL } from "@/lib/site";
 
@@ -118,10 +119,14 @@ export default async function LocaleLayout({
 	};
 
 	return (
-		<html lang={locale}>
+		<html lang={locale} suppressHydrationWarning>
 			<body
 				className={`${display.variable} ${body.variable} ${mono.variable} flex min-h-svh flex-col`}
 			>
+				<script
+					// biome-ignore lint/security/noDangerouslySetInnerHtml: stały skrypt z własnego modułu
+					dangerouslySetInnerHTML={{ __html: INTRO_BOOT_SCRIPT }}
+				/>
 				<script
 					type="application/ld+json"
 					// biome-ignore lint/security/noDangerouslySetInnerHtml: statyczny JSON-LD zbudowany z własnych stałych

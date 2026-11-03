@@ -218,6 +218,28 @@ h3 {
 	opacity: 0;
 }
 
+/* Intro już raz w pełni obejrzane: tekst i przyciski od razu na miejscu. */
+html[data-intro="seen"] .tw-rest {
+	opacity: 1;
+}
+
+html[data-intro="seen"] .hero-reveal {
+	transition: none;
+}
+
+html[data-intro="seen"] .hero-reveal[data-state="pending"] {
+	opacity: 1;
+	transform: none;
+	visibility: visible;
+}
+
+/* Gdy gra wideo, tekst hero dostaje czarny cień. */
+[data-video="on"] .hero-shadow {
+	text-shadow:
+		0 1px 2px rgb(0 0 0 / 0.85),
+		0 2px 18px rgb(0 0 0 / 0.75);
+}
+
 .tw-caret {
 	position: relative;
 	display: inline-block;
