@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useId, useState } from "react";
@@ -38,14 +37,9 @@ export default function Header({ locale, messages }: Props) {
 		<header className="sticky top-0 z-50 border-b border-line-soft bg-bg/95">
 			<div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
 				<Link href={home} aria-label={a11y.home} className="shrink-0">
-					<Image
-						src="/logo_white.png"
-						alt=""
-						width={96}
-						height={49}
-						priority
-						className="h-9 w-auto"
-					/>
+					<span className="font-display text-3xl font-bold leading-none tracking-tight">
+						KNNTP
+					</span>
 				</Link>
 
 				<nav aria-label={a11y.mainNav} className="hidden md:block">
