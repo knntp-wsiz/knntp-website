@@ -148,3 +148,74 @@ h3 {
 	height: 1px;
 	background: var(--accent);
 }
+
+/* Chmury w hero: 4 kafelki obok siebie, przesunięcie o jeden kafelek daje pętlę bez szwu. */
+.cloud-layer {
+	position: absolute;
+	left: 0;
+	width: calc(var(--h) * 13.3333);
+	background-repeat: repeat-x;
+	background-size: 25% 100%;
+	will-change: transform;
+	animation: cloud-drift var(--s) linear infinite;
+	-webkit-mask-image: linear-gradient(
+		to bottom,
+		transparent,
+		#000 32%,
+		#000 68%,
+		transparent
+	);
+	mask-image: linear-gradient(
+		to bottom,
+		transparent,
+		#000 32%,
+		#000 68%,
+		transparent
+	);
+}
+
+@keyframes cloud-drift {
+	to {
+		transform: translate3d(-25%, 0, 0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.cloud-layer {
+		animation: none;
+	}
+}
+
+/* Pisany nagłówek hero. */
+.tw-rest {
+	opacity: 0;
+}
+
+.tw-caret {
+	position: relative;
+	display: inline-block;
+	width: 0;
+}
+
+.tw-caret::after {
+	content: "";
+	position: absolute;
+	left: 0.04em;
+	bottom: 0.12em;
+	width: 0.08em;
+	height: 0.95em;
+	background: var(--accent);
+	animation: caret-blink 0.9s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.tw-caret::after {
+		animation: none;
+	}
+}

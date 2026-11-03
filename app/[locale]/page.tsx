@@ -3,7 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+import Clouds from "@/components/Clouds";
 import DotGrid from "@/components/DotGrid";
+import HeroCopy from "@/components/HeroCopy";
 import { isLocale, type Locale, localePath } from "@/i18n/config";
 import { format, getMessages } from "@/i18n/messages";
 import { getPosts } from "@/lib/blog";
@@ -44,22 +46,17 @@ export default async function Home({
 		<>
 			<section
 				aria-labelledby="hero-title"
-				className="relative flex min-h-[calc(100svh-4rem)] items-end overflow-hidden border-b border-line-soft"
+				className="relative flex min-h-[calc(100svh-4rem)] items-center justify-center overflow-hidden border-b border-line-soft"
 			>
+				<Clouds />
 				<DotGrid className="absolute inset-0 h-full w-full" />
-				<div className="pointer-events-none relative z-10 mx-auto w-full max-w-6xl px-4 pb-14 pt-24 sm:px-6 sm:pb-20">
-					<h1 id="hero-title">
-						<span className="block text-[clamp(4.5rem,17vw,6rem)] font-bold leading-[0.9] tracking-tight">
-							KNNTP
-						</span>
-						<span className="mt-4 block max-w-2xl font-sans text-lg font-normal leading-snug text-muted sm:text-xl">
-							{m.hero.fullName}
-						</span>
-					</h1>
-					<p className="mt-8 max-w-xl text-lg text-text sm:text-xl">
-						{m.hero.offer}
-					</p>
-					<div className="pointer-events-auto mt-9 flex flex-col gap-3 sm:flex-row">
+				<div className="pointer-events-none relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-4 py-24 text-center sm:px-6">
+					<HeroCopy
+						title="KNNTP"
+						fullName={m.hero.fullName}
+						offer={m.hero.offer}
+					/>
+					<div className="pointer-events-auto mt-9 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
 						<a href="/forms" className={primaryButton}>
 							{m.hero.join}
 							<FiArrowRight aria-hidden="true" />
@@ -295,6 +292,14 @@ export default async function Home({
 					</h2>
 					<div className="mt-14 grid gap-14 md:grid-cols-2">
 						<article className="border-t border-line pt-7">
+							<Image
+								src="/team/leader.jpg"
+								alt={m.team.leader.photoAlt}
+								width={480}
+								height={320}
+								sizes="(min-width: 768px) 384px, 100vw"
+								className="mb-6 aspect-[3/2] w-full max-w-sm object-cover object-[center_35%]"
+							/>
 							<p className="font-mono text-sm text-accent">
 								{m.team.leader.role}
 							</p>
