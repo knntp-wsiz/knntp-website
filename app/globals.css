@@ -1,35 +1,267 @@
 @import "tailwindcss";
 
+/*
+ * KNNTP: ciemna powierzchnia inżynierska, jeden akcent z logo.
+ * Kolory są zdefiniowane raz, tutaj; reszta strony czyta tokeny.
+ */
 :root {
-	--text: #14181a;
-	--background: #ecf1f3;
-	--primary: #32525d;
-	--secondary: #86b9ca;
-	--accent: #36809b;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--text: #e5e9eb;
-		--background: #233137;
-		--primary: #a2c2cd;
-		--secondary: #356879;
-		--accent: #64aec9;
-	}
+	color-scheme: dark;
+	--bg: oklch(15% 0.022 245);
+	--bg-raised: oklch(19.5% 0.03 245);
+	--line: oklch(32% 0.045 240);
+	--line-soft: oklch(25% 0.035 242);
+	--text: oklch(95% 0.008 240);
+	--muted: oklch(74% 0.03 240);
+	--accent: oklch(77% 0.105 225);
+	--accent-dim: oklch(60% 0.1 228);
+	--on-accent: oklch(16% 0.03 245);
+	/* Do canvasa: te same kolory jako kanały sRGB. */
+	--accent-rgb: 100 174 201;
+	--muted-rgb: 150 176 191;
 }
 
 @theme inline {
+	--color-bg: var(--bg);
+	--color-raised: var(--bg-raised);
+	--color-line: var(--line);
+	--color-line-soft: var(--line-soft);
 	--color-text: var(--text);
-	--color-background: var(--background);
-	--color-primary: var(--primary);
-	--color-secondary: var(--secondary);
+	--color-muted: var(--muted);
 	--color-accent: var(--accent);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
+	--color-accent-dim: var(--accent-dim);
+	--color-on-accent: var(--on-accent);
+	--font-sans: var(--font-body-src), system-ui, sans-serif;
+	--font-display: var(--font-display-src), "Arial Narrow", sans-serif;
+	--font-mono: var(--font-mono-src), ui-monospace, monospace;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 }
 
 body {
-	background: var(--background);
+	background: var(--bg);
 	color: var(--text);
-	font-family: "Roboto", Helvetica, sans-serif;
+	font-family: var(--font-body-src), system-ui, sans-serif;
+	font-size: 1.0625rem;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+/* Powierzchnie przeglądarki, które też należą do projektu. */
+::selection {
+	background: var(--accent);
+	color: var(--on-accent);
+}
+
+:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+	border-radius: 2px;
+}
+
+* {
+	scrollbar-color: var(--line) var(--bg);
+	scrollbar-width: thin;
+}
+
+a {
+	text-underline-offset: 0.25em;
+	text-decoration-thickness: 1px;
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-display-src), "Arial Narrow", sans-serif;
+	text-wrap: balance;
+	letter-spacing: -0.01em;
+	line-height: 1.02;
+}
+
+.tabular {
+	font-variant-numeric: tabular-nums;
+}
+
+/* Treść wpisów z Markdowna. */
+.prose-post {
+	max-width: 68ch;
+	color: var(--text);
+}
+
+.prose-post > * + * {
+	margin-top: 1.25rem;
+}
+
+.prose-post h2 {
+	margin-top: 3rem;
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.prose-post p,
+.prose-post li {
+	color: oklch(88% 0.012 240);
+}
+
+.prose-post a {
+	color: var(--accent);
+}
+
+.prose-post a:hover {
+	color: var(--text);
+}
+
+.prose-post strong {
+	color: var(--text);
+	font-weight: 700;
+}
+
+.prose-post ul {
+	list-style: none;
+	padding: 0;
+}
+
+.prose-post li {
+	position: relative;
+	padding-left: 1.5rem;
+}
+
+.prose-post li + li {
+	margin-top: 0.75rem;
+}
+
+.prose-post li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0.8em;
+	width: 0.75rem;
+	height: 1px;
+	background: var(--accent);
+}
+
+/* Wideo w tle hero: max 16:9, boki zanikają i rozmywają się na ultrawide. */
+.hero-video-box {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	height: 100%;
+	aspect-ratio: 16 / 9;
+	transform: translateX(-50%);
+	-webkit-mask-image:
+		linear-gradient(to right, transparent, #000 16%, #000 84%, transparent),
+		linear-gradient(to bottom, #000 78%, transparent);
+	mask-image:
+		linear-gradient(to right, transparent, #000 16%, #000 84%, transparent),
+		linear-gradient(to bottom, #000 78%, transparent);
+	-webkit-mask-composite: source-in;
+	mask-composite: intersect;
+}
+
+.hero-video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: saturate(0.9);
+	transition: opacity 1.4s ease-out;
+}
+
+.hero-video-blur {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 22%;
+	-webkit-backdrop-filter: blur(26px);
+	backdrop-filter: blur(26px);
+}
+
+.hero-video-blur-left {
+	left: 0;
+	-webkit-mask-image: linear-gradient(to right, #000, transparent);
+	mask-image: linear-gradient(to right, #000, transparent);
+}
+
+.hero-video-blur-right {
+	right: 0;
+	-webkit-mask-image: linear-gradient(to left, #000, transparent);
+	mask-image: linear-gradient(to left, #000, transparent);
+}
+
+/* Przysłona pod tekstem: środek ciemniejszy, żeby tekst trzymał kontrast na jasnych chmurach. */
+.hero-scrim {
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(
+			ellipse 58% 52% at 50% 50%,
+			color-mix(in oklab, var(--bg) 74%, transparent) 0%,
+			color-mix(in oklab, var(--bg) 52%, transparent) 62%,
+			transparent 100%
+		),
+		linear-gradient(
+			color-mix(in oklab, var(--bg) 22%, transparent),
+			color-mix(in oklab, var(--bg) 22%, transparent)
+		);
+}
+
+/* Pisany nagłówek hero. */
+.tw-rest {
+	opacity: 0;
+}
+
+.tw-caret {
+	position: relative;
+	display: inline-block;
+	width: 0;
+}
+
+.tw-caret::after {
+	content: "";
+	position: absolute;
+	left: 0.04em;
+	bottom: 0.12em;
+	width: 0.08em;
+	height: 0.95em;
+	background: var(--accent);
+	animation: caret-blink 0.9s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.tw-caret::after {
+		animation: none;
+	}
+}
+
+/* Przyciski i link pod nagłówkiem pojawiają się po napisaniu tekstu. */
+.hero-reveal {
+	transition:
+		opacity 0.7s ease-out,
+		transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-reveal[data-state="pending"] {
+	opacity: 0;
+	transform: translateY(12px);
+	visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero-reveal {
+		transition: none;
+	}
 }

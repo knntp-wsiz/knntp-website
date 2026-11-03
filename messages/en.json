@@ -1,0 +1,210 @@
+{
+	"meta": {
+		"title": "KNNTP, the New Programming Technologies Student Club at WSIiZ in Rzeszów",
+		"titleTemplate": "{title} | KNNTP WSIiZ",
+		"description": "KNNTP is a student science club at WSIiZ in Rzeszów, Poland. Projects in React, C++, C# and .NET, workshops and hackathons across Poland. Join us.",
+		"siteName": "KNNTP WSIiZ",
+		"keywords": [
+			"student club",
+			"WSIiZ",
+			"Rzeszów",
+			"programming",
+			"hackathon",
+			"HackYeah",
+			"HackNation",
+			"HackCarpathia",
+			"React",
+			"C++",
+			"C#",
+			".NET",
+			"computer science"
+		]
+	},
+	"a11y": {
+		"skip": "Skip to content",
+		"home": "KNNTP, home page",
+		"menuOpen": "Open menu",
+		"menuClose": "Close menu",
+		"mainNav": "Main navigation",
+		"language": "Language",
+		"externalLink": "(opens in a new tab)"
+	},
+	"nav": {
+		"about": "What we do",
+		"hackathons": "Hackathons",
+		"why": "Why join",
+		"team": "Team",
+		"blog": "Blog",
+		"join": "Join"
+	},
+	"hero": {
+		"fullName": "New Programming Technologies Student Club at WSIiZ",
+		"offer": "More than a degree. We build projects, train in new technologies and travel to hackathons across Poland. Join us in Rzeszów.",
+		"join": "Join the club",
+		"discord": "Open Discord",
+		"latestLabel": "Latest",
+		"latest": "HackYeah 2026: a WSIiZ student won the Smart City category"
+	},
+	"about": {
+		"title": "More than a degree",
+		"lead": "The club is where code goes beyond your classes. You learn on real projects, from people who already work in the industry.",
+		"items": [
+			{
+				"title": "Hackathons",
+				"text": "24 hours, a real problem and a working prototype at the end. We travel to Kraków and Bydgoszcz, and HackCarpathia happens right here in Rzeszów."
+			},
+			{
+				"title": "Projects",
+				"text": "Shared projects in React, C++, C# and .NET. You work in a team, in a repository, with code review."
+			},
+			{
+				"title": "Workshops",
+				"text": "Technology workshops led by practitioners, including React and Git."
+			},
+			{
+				"title": "Events",
+				"text": "From our history: IT Academic Day, Co? Gdzie? Kiedy? (a quiz night), Hackathon Rzeszów, Game Jam, IoT Connect and Gaming Rzeszów."
+			}
+		],
+		"historyTitle": "From our history",
+		"history": [
+			{ "count": "4 editions", "name": "IT Academic Day" },
+			{ "count": "6 editions", "name": "Co? Gdzie? Kiedy?" },
+			{ "count": "3 editions", "name": "Hackathon Rzeszów" }
+		],
+		"historyNote": "Events from 2012 to 2018."
+	},
+	"hackathons": {
+		"title": "We go to hackathons",
+		"lead": "Newest first. We only report results as described by the university.",
+		"sourceLabel": "Source: WSIiZ",
+		"readMore": "Read the post",
+		"photoCredit": "Photos: {credit}",
+		"earlierTitle": "Earlier in the club calendar",
+		"items": {
+			"hackyeah-2026": {
+				"name": "HackYeah 2026",
+				"place": "Kraków",
+				"date": "3 and 4 October 2026",
+				"badge": "1st place, Smart City",
+				"stats": [
+					"24 h",
+					"3,000+ participants",
+					"130+ projects in the category"
+				],
+				"summary": "WSIiZ student Dmytrii Zherebtsov entered solo and won the Smart City category. His system plans drone routes for search and rescue operations and passes data on located people to the command centre. Prize: PLN 8,000.",
+				"extra": "Team SideQuest from WSIiZ reached the TOP 5 in the HubMI.pl category with the project \"Rozmach\".",
+				"credit": "WSIiZ",
+				"photoAlts": [
+					"Four WSIiZ students pose in a hall in Kraków next to pink cubes spelling HackYeah.",
+					"The WSIiZ crew at a table with laptops in Tauron Arena Kraków during HackYeah."
+				]
+			},
+			"hackcarpathia-2026": {
+				"name": "HackCarpathia 2026",
+				"place": "Rzeszów",
+				"date": "April 2026",
+				"badge": "at home, in Rzeszów",
+				"stats": ["3rd edition", "the biggest hackathon in the city"],
+				"summary": "The third edition of HackCarpathia took place in our city. The winner was team CombAIns from Warsaw University of Technology, with an app for teenage girls who fear their first gynaecologist visit. They also took the Medtech distinction.",
+				"extra": "",
+				"credit": "",
+				"photoAlts": []
+			},
+			"hacknation-2025": {
+				"name": "HackNation 2025",
+				"place": "Bydgoszcz",
+				"date": "6 and 7 December 2025",
+				"badge": "finals, 2 teams",
+				"stats": ["24 h", "about 1,500 participants", "about 50 from WSIiZ"],
+				"summary": "Poland's first implementation hackathon for public administration. WSIiZ students and alumni reached the finals in two Ministry of Digital Affairs tasks: \"Zgrany budżet\" (scored 4.85/5) and \"Odnalezione zguby\" (lost and found).",
+				"extra": "",
+				"credit": "WSIiZ and the HackNation organisers",
+				"photoAlts": [
+					"Aerial view of the HackNation hall in Bydgoszcz: hundreds of participants at tables and a stage with screens.",
+					"HackNation participants at laptops under screens showing the event logo and a countdown.",
+					"A crowd of hackathon participants working at long tables in the hall.",
+					"A group of participants talking over laptops while working on a project."
+				]
+			}
+		},
+		"earlier": [
+			{ "name": "HackYeah", "date": "October 2025" },
+			{ "name": "HackCarpathia", "date": "April 2025" },
+			{ "name": "Hackathon Rzeszów", "date": "3 editions, 2012 to 2018" }
+		]
+	},
+	"why": {
+		"title": "Why it pays to be active",
+		"items": [
+			{
+				"title": "Internships and jobs",
+				"text": "The club is the shortest path to your first internships, traineeships and jobs in the industry."
+			},
+			{
+				"title": "Technology workshops",
+				"text": "React and Git workshops are run by people who do this for a living."
+			},
+			{
+				"title": "Scholarship points",
+				"text": "Being active in the club can earn you scholarship points."
+			},
+			{
+				"title": "Networking",
+				"text": "You meet people from the industry and from other years at hackathons and meetings."
+			}
+		]
+	},
+	"team": {
+		"title": "Team",
+		"leader": {
+			"name": "Eryk Kunasz",
+			"role": "KNNTP leader",
+			"photoAlt": "A black cat holding a twenty-dollar bill in its mouth.",
+			"text": "Computer science student specialising in cybersecurity at WSIiZ. Frontend developer: React, Next.js, Tailwind CSS."
+		},
+		"supervisor": {
+			"name": "Dr Marek Jaszuk",
+			"role": "Club supervisor",
+			"text": "Assistant professor in the Department of Information Systems Applications at WSIiZ. Works on robot perception and cognitive systems.",
+			"photoAlt": "Dr Marek Jaszuk wearing a VR headset at a university event.",
+			"link": "Profile on wsiz.edu.pl"
+		}
+	},
+	"join": {
+		"title": "Join KNNTP",
+		"text": "Fill in a short form and we will get back to you with the date of the next meeting. You can ask questions on Discord.",
+		"form": "Fill in the form",
+		"discord": "Questions on Discord"
+	},
+	"blog": {
+		"title": "Blog",
+		"description": "Hackathon reports, events and news from the KNNTP student club at WSIiZ.",
+		"intro": "Hackathon reports and club news.",
+		"empty": "No posts yet.",
+		"latest": "From the blog",
+		"all": "All posts",
+		"read": "Keep reading",
+		"back": "All posts",
+		"published": "Published",
+		"source": "Source",
+		"readingTime": "{minutes} min read"
+	},
+	"footer": {
+		"tagline": "The New Programming Technologies Student Club at the University of Information Technology and Management in Rzeszów.",
+		"links": "Links",
+		"rights": "KNNTP WSIiZ",
+		"wsiz": "WSIiZ logo",
+		"github": "GitHub",
+		"discord": "Discord"
+	},
+	"notFound": {
+		"title": "Page not found",
+		"text": "This address does not exist or has been moved.",
+		"back": "Back to the home page"
+	},
+	"lang": {
+		"pl": "Polski",
+		"en": "English"
+	}
+}

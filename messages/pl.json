@@ -1,0 +1,206 @@
+{
+	"meta": {
+		"title": "Koło Naukowe Nowych Technologii Programistycznych WSIiZ w Rzeszowie",
+		"titleTemplate": "{title} | KNNTP WSIiZ",
+		"description": "KNNTP to koło naukowe studentów WSIiZ w Rzeszowie. Projekty w React, C++, C# i .NET, szkolenia i hackathony w całej Polsce. Dołącz do nas.",
+		"siteName": "KNNTP WSIiZ",
+		"keywords": [
+			"koło naukowe",
+			"WSIiZ",
+			"Rzeszów",
+			"programowanie",
+			"hackathon",
+			"HackYeah",
+			"HackNation",
+			"HackCarpathia",
+			"React",
+			"C++",
+			"C#",
+			".NET",
+			"studia IT"
+		]
+	},
+	"a11y": {
+		"skip": "Przejdź do treści",
+		"home": "KNNTP, strona główna",
+		"menuOpen": "Otwórz menu",
+		"menuClose": "Zamknij menu",
+		"mainNav": "Główna nawigacja",
+		"language": "Język",
+		"externalLink": "(otwiera się w nowej karcie)"
+	},
+	"nav": {
+		"about": "Co robimy",
+		"hackathons": "Hackathony",
+		"why": "Dlaczego warto",
+		"team": "Zespół",
+		"blog": "Blog",
+		"join": "Dołącz"
+	},
+	"hero": {
+		"fullName": "Koło Naukowe Nowych Technologii Programistycznych WSIiZ",
+		"offer": "Nie tylko studia. Robimy projekty, szkolimy się z technologii i jeździmy na hackathony w całej Polsce. Dołącz do nas w Rzeszowie.",
+		"join": "Dołącz do koła",
+		"discord": "Wejdź na Discorda",
+		"latestLabel": "Najnowsze",
+		"latest": "HackYeah 2026: student WSIiZ wygrał kategorię Smart City"
+	},
+	"about": {
+		"title": "Nie tylko studia",
+		"lead": "Koło to miejsce, w którym kod wychodzi poza zajęcia. Uczysz się na prawdziwych projektach, od ludzi, którzy już pracują w branży.",
+		"items": [
+			{
+				"title": "Hackathony",
+				"text": "24 godziny, prawdziwy problem i gotowy prototyp na koniec. Jeździmy do Krakowa i Bydgoszczy, a w Rzeszowie mamy HackCarpathię."
+			},
+			{
+				"title": "Projekty",
+				"text": "Wspólne projekty w React, C++, C# i .NET. Pracujesz w zespole, w repozytorium, z code review."
+			},
+			{
+				"title": "Szkolenia",
+				"text": "Warsztaty z technologii prowadzone przez praktyków, między innymi z Reacta i Gita."
+			},
+			{
+				"title": "Wydarzenia",
+				"text": "W naszej historii: IT Academic Day, Co? Gdzie? Kiedy?, Hackathon Rzeszów, Game Jam, IoT Connect i Gaming Rzeszów."
+			}
+		],
+		"historyTitle": "Z naszej historii",
+		"history": [
+			{ "count": "4 edycje", "name": "IT Academic Day" },
+			{ "count": "6 edycji", "name": "Co? Gdzie? Kiedy?" },
+			{ "count": "3 edycje", "name": "Hackathon Rzeszów" }
+		],
+		"historyNote": "Wydarzenia z lat 2012 do 2018."
+	},
+	"hackathons": {
+		"title": "Jeździmy na hackathony",
+		"lead": "Od najnowszego. Wyniki podajemy tylko takie, jakie opisała uczelnia.",
+		"sourceLabel": "Źródło: WSIiZ",
+		"readMore": "Czytaj wpis",
+		"photoCredit": "Zdjęcia: {credit}",
+		"earlierTitle": "Wcześniej w kalendarzu koła",
+		"items": {
+			"hackyeah-2026": {
+				"name": "HackYeah 2026",
+				"place": "Kraków",
+				"date": "3 i 4 października 2026",
+				"badge": "1. miejsce, Smart City",
+				"stats": ["24 h", "3 000+ uczestników", "130+ projektów w kategorii"],
+				"summary": "Student WSIiZ Dmytrii Zherebtsov wystartował sam i wygrał kategorię Smart City. Jego system planuje trasy dronów w akcjach poszukiwawczo-ratowniczych i przekazuje sztabowi dane o odnalezionych osobach. Nagroda: 8 000 zł.",
+				"extra": "Zespół SideQuest ze WSIiZ trafił do TOP 5 w kategorii HubMI.pl z projektem „Rozmach”.",
+				"credit": "WSIiZ",
+				"photoAlts": [
+					"Czworo studentów WSIiZ pozuje w hali w Krakowie przy różowych kostkach z napisem HackYeah.",
+					"Ekipa WSIiZ przy stole z laptopami w Tauron Arenie Kraków podczas HackYeah."
+				]
+			},
+			"hackcarpathia-2026": {
+				"name": "HackCarpathia 2026",
+				"place": "Rzeszów",
+				"date": "kwiecień 2026",
+				"badge": "u nas, w Rzeszowie",
+				"stats": ["3. edycja", "największy hackathon w mieście"],
+				"summary": "Trzecia edycja HackCarpathii odbyła się w naszym mieście. Wygrał zespół CombAIns z Politechniki Warszawskiej z aplikacją dla nastolatek obawiających się pierwszej wizyty u ginekologa, który zdobył też wyróżnienie w kategorii Medtech.",
+				"extra": "",
+				"credit": "",
+				"photoAlts": []
+			},
+			"hacknation-2025": {
+				"name": "HackNation 2025",
+				"place": "Bydgoszcz",
+				"date": "6 i 7 grudnia 2025",
+				"badge": "finały, 2 zespoły",
+				"stats": ["24 h", "ok. 1 500 uczestników", "ok. 50 osób ze WSIiZ"],
+				"summary": "Pierwszy w Polsce hackathon wdrożeniowy dla administracji publicznej. Studenci i absolwenci WSIiZ weszli do finałów w dwóch zadaniach Ministerstwa Cyfryzacji: „Zgrany budżet” (ocena 4,85/5) i „Odnalezione zguby”.",
+				"extra": "",
+				"credit": "WSIiZ i organizatorzy HackNation",
+				"photoAlts": [
+					"Widok z góry na halę HackNation w Bydgoszczy: setki uczestników przy stołach i scena z ekranami.",
+					"Uczestnicy HackNation przy laptopach pod ekranami z logo wydarzenia i odliczaniem czasu.",
+					"Tłum uczestników hackathonu pracujących przy długich stołach w hali.",
+					"Grupa uczestników rozmawia przy laptopach podczas pracy nad projektem."
+				]
+			}
+		},
+		"earlier": [
+			{ "name": "HackYeah", "date": "październik 2025" },
+			{ "name": "HackCarpathia", "date": "kwiecień 2025" },
+			{ "name": "Hackathon Rzeszów", "date": "3 edycje, 2012 do 2018" }
+		]
+	},
+	"why": {
+		"title": "Dlaczego warto być aktywnym",
+		"items": [
+			{
+				"title": "Praktyki, staże, praca",
+				"text": "Koło to najkrótsza droga do pierwszych praktyk, staży i pracy w branży."
+			},
+			{
+				"title": "Szkolenia z technologii",
+				"text": "Warsztaty z Reacta i Gita prowadzą ludzie, którzy zajmują się tym zawodowo."
+			},
+			{
+				"title": "Punkty do stypendium",
+				"text": "Aktywność w kole może dawać punkty do stypendium."
+			},
+			{
+				"title": "Networking",
+				"text": "Poznajesz ludzi z branży i z innych roczników na hackathonach i spotkaniach."
+			}
+		]
+	},
+	"team": {
+		"title": "Zespół",
+		"leader": {
+			"name": "Eryk Kunasz",
+			"role": "Lider KNNTP",
+			"photoAlt": "Czarny kot z banknotem dwudziestodolarowym w pysku.",
+			"text": "Student informatyki o specjalizacji cyberbezpieczeństwo na WSIiZ. Frontend developer: React, Next.js, Tailwind CSS."
+		},
+		"supervisor": {
+			"name": "dr Marek Jaszuk",
+			"role": "Opiekun koła",
+			"text": "Adiunkt w Katedrze Zastosowań Systemów Informatycznych WSIiZ. Zajmuje się percepcją robotów i systemami kognitywnymi.",
+			"photoAlt": "Dr Marek Jaszuk w goglach VR podczas wydarzenia na uczelni.",
+			"link": "Profil na wsiz.edu.pl"
+		}
+	},
+	"join": {
+		"title": "Dołącz do KNNTP",
+		"text": "Wypełnij krótki formularz, a odezwiemy się z informacją o najbliższym spotkaniu. Pytania możesz zadać na Discordzie.",
+		"form": "Wypełnij formularz",
+		"discord": "Pytania na Discordzie"
+	},
+	"blog": {
+		"title": "Blog",
+		"description": "Relacje z hackathonów, wydarzenia i wiadomości z koła naukowego KNNTP WSIiZ.",
+		"intro": "Relacje z hackathonów i wiadomości z koła.",
+		"empty": "Nie ma jeszcze wpisów.",
+		"latest": "Z bloga",
+		"all": "Wszystkie wpisy",
+		"read": "Czytaj dalej",
+		"back": "Wszystkie wpisy",
+		"published": "Opublikowano",
+		"source": "Źródło",
+		"readingTime": "{minutes} min czytania"
+	},
+	"footer": {
+		"tagline": "Koło Naukowe Nowych Technologii Programistycznych przy Wyższej Szkole Informatyki i Zarządzania w Rzeszowie.",
+		"links": "Linki",
+		"rights": "KNNTP WSIiZ",
+		"wsiz": "Logo WSIiZ",
+		"github": "GitHub",
+		"discord": "Discord"
+	},
+	"notFound": {
+		"title": "Nie znaleziono strony",
+		"text": "Ten adres nie istnieje albo został przeniesiony.",
+		"back": "Wróć na stronę główną"
+	},
+	"lang": {
+		"pl": "Polski",
+		"en": "English"
+	}
+}
