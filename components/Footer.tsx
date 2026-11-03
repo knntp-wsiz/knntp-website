@@ -4,6 +4,7 @@ import { FaDiscord, FaGithub } from "react-icons/fa";
 import { type Locale, localePath } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 import { DISCORD_URL, GITHUB_ORG_URL } from "@/lib/site";
+import ReplayIntro from "./ReplayIntro";
 
 export default function Footer({
 	locale,
@@ -46,6 +47,12 @@ export default function Footer({
 							>
 								{nav.join}
 							</a>
+						</li>
+						<li>
+							<ReplayIntro
+								label={footer.replayIntro}
+								href={localePath(locale, "/")}
+							/>
 						</li>
 					</ul>
 					<ul className="mt-6 flex gap-5">

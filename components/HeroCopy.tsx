@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { hasSeenIntro, markIntroSeen } from "@/lib/intro";
 import { useHeroTyping } from "./HeroTyping";
 
 type Props = {
@@ -25,7 +26,10 @@ export default function HeroCopy({ title, fullName, offer }: Props) {
 	// biome-ignore lint/correctness/useExhaustiveDependencies: teksty są stałe dla danego renderu strony, finish jest stabilne
 	useEffect(() => {
 		const full = texts.map((t) => t.length);
-		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+		if (
+			hasSeenIntro() ||
+			window.matchMedia("(prefers-reduced-motion: reduce)").matches
+		) {
 			setCounts(full);
 			finish();
 			return;
@@ -51,7 +55,9 @@ export default function HeroCopy({ title, fullName, offer }: Props) {
 			}
 			finish();
 			await wait(2800);
-			if (!cancelled) setActive(-1);
+			if (cancelled) return;
+			setActive(-1);
+			markIntroSeen();
 		})();
 
 		return () => {
@@ -76,7 +82,7 @@ export default function HeroCopy({ title, fullName, offer }: Props) {
 					}
 				</style>
 			</noscript>
-			<h1 id="hero-title">
+			<h1 id="hero-title" className="hero-shadow">
 				<span className="block text-[clamp(4.5rem,17vw,6rem)] font-bold leading-[0.9] tracking-tight">
 					{typed(0)}
 				</span>
@@ -84,7 +90,7 @@ export default function HeroCopy({ title, fullName, offer }: Props) {
 					{typed(1)}
 				</span>
 			</h1>
-			<p className="mx-auto mt-8 max-w-xl text-lg text-text sm:text-xl">
+			<p className="hero-shadow mx-auto mt-8 max-w-xl text-lg text-text sm:text-xl">
 				{typed(2)}
 			</p>
 		</>

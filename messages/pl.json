@@ -2,7 +2,7 @@
 	"meta": {
 		"title": "Koło Naukowe Nowych Technologii Programistycznych WSIiZ w Rzeszowie",
 		"titleTemplate": "{title} | KNNTP WSIiZ",
-		"description": "KNNTP to koło naukowe studentów WSIiZ w Rzeszowie. Projekty w React, C++, C# i .NET, szkolenia i hackathony w całej Polsce. Dołącz do nas.",
+		"description": "KNNTP to koło naukowe studentów WSIiZ w Rzeszowie. Projekty w React, C++, C# i .NET, szkolenia, hackathony i staże. Dołącz do nas.",
 		"siteName": "KNNTP WSIiZ",
 		"keywords": [
 			"koło naukowe",
@@ -17,7 +17,10 @@
 			"C++",
 			"C#",
 			".NET",
-			"studia IT"
+			"studia IT",
+			"mLab",
+			"staże",
+			"praktyki"
 		]
 	},
 	"a11y": {
@@ -32,6 +35,7 @@
 	"nav": {
 		"about": "Co robimy",
 		"hackathons": "Hackathony",
+		"programs": "Staże",
 		"why": "Dlaczego warto",
 		"team": "Zespół",
 		"blog": "Blog",
@@ -54,6 +58,10 @@
 				"text": "24 godziny, prawdziwy problem i gotowy prototyp na koniec. Jeździmy do Krakowa i Bydgoszczy, a w Rzeszowie mamy HackCarpathię."
 			},
 			{
+				"title": "Staże",
+				"text": "Pomagamy trafić do programów praktyk. Kilka osób z koła przeszło mLab AI w Rzeszowie, gdzie studenci budują aplikacje dla organizacji pozarządowych."
+			},
+			{
 				"title": "Projekty",
 				"text": "Wspólne projekty w React, C++, C# i .NET. Pracujesz w zespole, w repozytorium, z code review."
 			},
@@ -68,9 +76,18 @@
 		],
 		"historyTitle": "Z naszej historii",
 		"history": [
-			{ "count": "4 edycje", "name": "IT Academic Day" },
-			{ "count": "6 edycji", "name": "Co? Gdzie? Kiedy?" },
-			{ "count": "3 edycje", "name": "Hackathon Rzeszów" }
+			{
+				"count": "4 edycje",
+				"name": "IT Academic Day"
+			},
+			{
+				"count": "6 edycji",
+				"name": "Co? Gdzie? Kiedy?"
+			},
+			{
+				"count": "3 edycje",
+				"name": "Hackathon Rzeszów"
+			}
 		],
 		"historyNote": "Wydarzenia z lat 2012 do 2018."
 	},
@@ -125,9 +142,18 @@
 			}
 		},
 		"earlier": [
-			{ "name": "HackYeah", "date": "październik 2025" },
-			{ "name": "HackCarpathia", "date": "kwiecień 2025" },
-			{ "name": "Hackathon Rzeszów", "date": "3 edycje, 2012 do 2018" }
+			{
+				"name": "HackYeah",
+				"date": "październik 2025"
+			},
+			{
+				"name": "HackCarpathia",
+				"date": "kwiecień 2025"
+			},
+			{
+				"name": "Hackathon Rzeszów",
+				"date": "3 edycje, 2012 do 2018"
+			}
 		]
 	},
 	"why": {
@@ -175,8 +201,8 @@
 	},
 	"blog": {
 		"title": "Blog",
-		"description": "Relacje z hackathonów, wydarzenia i wiadomości z koła naukowego KNNTP WSIiZ.",
-		"intro": "Relacje z hackathonów i wiadomości z koła.",
+		"description": "Relacje z hackathonów, staży i wydarzeń oraz wiadomości z koła naukowego KNNTP WSIiZ.",
+		"intro": "Relacje z hackathonów, staży i wydarzeń oraz wiadomości z koła.",
 		"empty": "Nie ma jeszcze wpisów.",
 		"latest": "Z bloga",
 		"all": "Wszystkie wpisy",
@@ -187,6 +213,7 @@
 		"readingTime": "{minutes} min czytania"
 	},
 	"footer": {
+		"replayIntro": "Odtwórz intro ponownie",
 		"tagline": "Koło Naukowe Nowych Technologii Programistycznych przy Wyższej Szkole Informatyki i Zarządzania w Rzeszowie.",
 		"links": "Linki",
 		"rights": "KNNTP WSIiZ",
@@ -202,5 +229,48 @@
 	"lang": {
 		"pl": "Polski",
 		"en": "English"
+	},
+	"programs": {
+		"title": "Staże i praktyki",
+		"lead": "Oprócz hackathonów: programy praktyk, w których studenci pracują nad prawdziwymi produktami. Kilka osób z naszego koła brało udział w mLab AI.",
+		"sourceLabel": "Źródło",
+		"items": {
+			"mlab-ai-2026": {
+				"name": "mLab AI 2026",
+				"place": "Rzeszów, Fabryka Smaku",
+				"date": "14 października 2026 (Demo Day)",
+				"badge": "2. edycja w obecnej formule",
+				"stats": [
+					"15 tygodni",
+					"23 studentów z 5 uczelni",
+					"10 projektów dla NGO"
+				],
+				"summary": "Program praktyk AI firmy mobitouch: studenci budują aplikacje dla organizacji pozarządowych, w tym ośmiu z Podkarpacia. Na Demo Day zespoły pokazały 10 gotowych rozwiązań, między innymi platformę ResQ do koordynacji pomocy kryzysowej i Grantotekę do rozliczania grantów.",
+				"extra": "W tej edycji wzięło udział kilka osób z naszego koła.",
+				"credit": "Bartłomiej Łobaza (torzeszow.pl)",
+				"sourceLabel": "Źródło: torzeszow.pl",
+				"photoAlts": [
+					"Publiczność na Demo Day mLab AI 2026 w Fabryce Smaku: ludzie na krzesłach klaszczą, w tle ekran z logo wydarzenia.",
+					"Uczestnik mLab AI odbiera certyfikat i ściska dłoń przedstawicielowi mobitouch na tle banerów programu.",
+					"Pięć osób pozuje z certyfikatami przed banerami mobitouch i mLab AI."
+				]
+			},
+			"mlab-ai-2025": {
+				"name": "mLab AI 2025",
+				"place": "Rzeszów",
+				"date": "2025",
+				"badge": "1. edycja",
+				"stats": ["20 uczestników", "6 aplikacji dla NGO"],
+				"summary": "Pierwsza edycja programu: 20 praktykantów zbudowało 6 aplikacji dla organizacji pozarządowych, między innymi dla EKOSKOP, Fundacji SOS Życie i Parasola. Prowadzili ich mentorzy z mobitouch.",
+				"extra": "Już wtedy w programie byli członkowie naszego koła.",
+				"credit": "mLab / mobitouch",
+				"sourceLabel": "Źródło: mLab",
+				"photoAlts": [
+					"Uczestnicy mLab AI 2025 z certyfikatami i przedstawicielami mobitouch przed banerem programu.",
+					"Rozmowa mentoringowa na kanapach w biurze mobitouch, jeden z uczestników pracuje na laptopie.",
+					"Uczestnik prezentuje na scenie aplikację dla nauczycieli, wyświetlaną na ekranie za nim."
+				]
+			}
+		}
 	}
 }

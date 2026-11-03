@@ -17,6 +17,9 @@ Student WSIiZ **Dmytrii Zherebtsov** wystartował indywidualnie i wygrał całą
 
 Nagroda wyniosła 8 000 zł. Dmytrii mówi, że przeznaczy ją na dodatkowy sprzęt muzyczny na występ w konkursie „WSIiZ Ma Talent”. Chciałby też, żeby jego rozwiązanie zostało wdrożone.
 
+![Dmytrii Zherebtsov z czekiem na 8 000 zł na scenie HackYeah, przy różowych kostkach z napisem HackYeah.](/events/hackyeah-2026/dmytrii.jpg)
+*Dmytrii Zherebtsov z nagrodą za pierwsze miejsce w kategorii Smart City.*
+
 ## SideQuest w TOP 5
 
 W kategorii HubMI.pl wystartował zespół **SideQuest** ze WSIiZ. Ich projekt „Rozmach”, cyfrowy system wspierający małopolski hub innowacji społecznych, znalazł się w TOP 5 kategorii.

@@ -4,13 +4,14 @@ import { notFound } from "next/navigation";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 import DotGrid from "@/components/DotGrid";
+import EventEntry from "@/components/EventEntry";
 import HeroCopy from "@/components/HeroCopy";
 import { HeroReveal, HeroTypingProvider } from "@/components/HeroTyping";
 import HeroVideo from "@/components/HeroVideo";
 import { isLocale, type Locale, localePath } from "@/i18n/config";
 import { format, getMessages } from "@/i18n/messages";
 import { getPosts } from "@/lib/blog";
-import { HACKATHONS } from "@/lib/events";
+import { HACKATHONS, PROGRAMS } from "@/lib/events";
 import {
 	DISCORD_URL,
 	GITHUB_ORG_URL,
@@ -49,7 +50,7 @@ export default async function Home({
 				aria-labelledby="hero-title"
 				className="relative flex min-h-[calc(100svh-4rem)] items-center justify-center overflow-hidden border-b border-line-soft"
 			>
-				<HeroVideo src="/video/clouds.mp4" />
+				<HeroVideo base="/video/clouds" />
 				<DotGrid className="absolute inset-0 h-full w-full" />
 				<div className="pointer-events-none relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-4 py-24 text-center sm:px-6">
 					<HeroTypingProvider>
@@ -75,7 +76,7 @@ export default async function Home({
 									<span className="sr-only">{m.a11y.externalLink}</span>
 								</a>
 							</div>
-							<p className="pointer-events-auto mt-12 max-w-xl border-t border-line-soft pt-5 font-mono text-sm text-muted">
+							<p className="hero-shadow pointer-events-auto mt-12 max-w-xl border-t border-line-soft pt-5 font-mono text-sm text-muted">
 								<span className="text-accent">{m.hero.latestLabel}</span>
 								{" / "}
 								<Link
@@ -154,95 +155,21 @@ export default async function Home({
 					<ol className="mt-14">
 						{HACKATHONS.map((event) => {
 							const text = m.hackathons.items[event.id];
-							const alts: readonly string[] = text.photoAlts;
 							return (
-								<li
+								<EventEntry
 									key={event.id}
-									className="grid gap-8 border-t border-line py-12 lg:grid-cols-[13rem_1fr]"
-								>
-									<div className="font-mono text-sm">
-										<time
-											dateTime={event.startDate}
-											className="block text-text"
-										>
-											{text.date}
-										</time>
-										<p className="mt-1 text-muted">{text.place}</p>
-										<p className="mt-4 inline-block border border-accent px-2.5 py-1 text-accent">
-											{text.badge}
-										</p>
-									</div>
-
-									<article>
-										<h3 className="text-4xl font-semibold sm:text-5xl">
-											{text.name}
-										</h3>
-										<ul className="mt-4 flex flex-wrap gap-x-6 gap-y-1 font-mono text-sm text-accent tabular">
-											{text.stats.map((stat) => (
-												<li key={stat}>{stat}</li>
-											))}
-										</ul>
-										<p className="mt-6 max-w-2xl text-lg text-text">
-											{text.summary}
-										</p>
-										{text.extra && (
-											<p className="mt-3 max-w-2xl text-muted">{text.extra}</p>
-										)}
-
-										{event.photos.length > 0 && (
-											<div
-												className={
-													event.photos.length === 2
-														? "mt-8 grid max-w-2xl grid-cols-2 gap-3"
-														: "mt-8 grid grid-cols-2 gap-3"
-												}
-											>
-												{event.photos.map((src, i) => (
-													<Image
-														key={src}
-														src={src}
-														alt={alts[i] ?? ""}
-														width={900}
-														height={event.photos.length === 2 ? 1200 : 600}
-														sizes="(min-width: 1024px) 460px, 50vw"
-														className={
-															event.photos.length === 2
-																? "aspect-[3/4] w-full object-cover"
-																: "aspect-[3/2] w-full object-cover"
-														}
-													/>
-												))}
-											</div>
-										)}
-										{text.credit && (
-											<p className="mt-3 font-mono text-xs text-muted">
-												{format(m.hackathons.photoCredit, {
-													credit: text.credit,
-												})}
-											</p>
-										)}
-
-										<div className="mt-7 flex flex-wrap gap-x-8 gap-y-3">
-											<Link
-												href={localePath(locale, `/blog/${event.blogSlug}`)}
-												className="inline-flex items-center gap-2 font-semibold text-accent hover:text-text"
-											>
-												{m.hackathons.readMore}
-												<FiArrowRight aria-hidden="true" />
-											</Link>
-											<a
-												href={event.sourceUrl}
-												target="_blank"
-												rel="noopener noreferrer"
-												className="inline-flex items-center gap-2 text-muted hover:text-text"
-											>
-												{m.hackathons.sourceLabel}
-												<FiArrowUpRight aria-hidden="true" />
-												<span className="sr-only">{m.a11y.externalLink}</span>
-											</a>
-										</div>
-									</article>
-								</li>
+									event={event}
+									text={text}
+									locale={locale}
+									labels={{
+										readMore: m.hackathons.readMore,
+										sourceLabel: m.hackathons.sourceLabel,
+										credit: format(m.hackathons.photoCredit, {
+											credit: text.credit,
+										}),
+										externalLink: m.a11y.externalLink,
+									}}
+								/>
 							);
 						})}
 					</ol>
@@ -263,6 +190,38 @@ export default async function Home({
 						</ul>
 					</div>
 				</div>
+			</section>
+
+			<section
+				id="programs"
+				aria-labelledby="programs-title"
+				className="mx-auto max-w-6xl px-4 py-24 sm:px-6"
+			>
+				<h2 id="programs-title" className="text-5xl font-semibold sm:text-6xl">
+					{m.programs.title}
+				</h2>
+				<p className="mt-5 max-w-xl text-lg text-muted">{m.programs.lead}</p>
+				<ol className="mt-14">
+					{PROGRAMS.map((event) => {
+						const text = m.programs.items[event.id];
+						return (
+							<EventEntry
+								key={event.id}
+								event={event}
+								text={text}
+								locale={locale}
+								labels={{
+									readMore: m.hackathons.readMore,
+									sourceLabel: text.sourceLabel,
+									credit: format(m.hackathons.photoCredit, {
+										credit: text.credit,
+									}),
+									externalLink: m.a11y.externalLink,
+								}}
+							/>
+						);
+					})}
+				</ol>
 			</section>
 
 			<section

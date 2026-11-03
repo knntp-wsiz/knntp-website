@@ -17,6 +17,9 @@ WSIiZ student **Dmytrii Zherebtsov** entered solo and won the whole category. Hi
 
 The prize was PLN 8,000. Dmytrii says he will spend it on extra music equipment for his performance at the "WSIiZ Ma Talent" contest. He would also like to see his solution put into use.
 
+![Dmytrii Zherebtsov holding a PLN 8,000 prize cheque on the HackYeah stage, next to pink cubes spelling HackYeah.](/events/hackyeah-2026/dmytrii.jpg)
+*Dmytrii Zherebtsov with the first-place prize in the Smart City category.*
+
 ## SideQuest in the TOP 5
 
 Team **SideQuest** from WSIiZ competed in the HubMI.pl category. Their project "Rozmach", a digital system supporting a social innovation hub in Lesser Poland, made it into the category's TOP 5.
