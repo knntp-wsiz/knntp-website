@@ -21,7 +21,11 @@
 			"mLab",
 			"internships",
 			"student internships"
-		]
+		],
+		"ogTitle": "KNNTP: code with us in Rzeszów",
+		"ogDescription": "Hackathons, internships and projects in React, C++ and .NET. Join the WSIiZ student club.",
+		"ogTagline": "Programming student club at WSIiZ",
+		"ogChips": ["Hackathons", "Internships", "Projects"]
 	},
 	"a11y": {
 		"skip": "Skip to content",

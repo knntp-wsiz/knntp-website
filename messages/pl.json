@@ -21,7 +21,11 @@
 			"mLab",
 			"staże",
 			"praktyki"
-		]
+		],
+		"ogTitle": "KNNTP: programuj z nami w Rzeszowie",
+		"ogDescription": "Hackathony, staże i projekty w React, C++ i .NET. Dołącz do koła WSIiZ.",
+		"ogTagline": "Koło naukowe programistów WSIiZ",
+		"ogChips": ["Hackathony", "Staże", "Projekty"]
 	},
 	"a11y": {
 		"skip": "Przejdź do treści",
