@@ -160,6 +160,7 @@
 		"leader": {
 			"name": "Eryk Kunasz",
 			"role": "KNNTP leader",
+			"photoAlt": "A black cat holding a twenty-dollar bill in its mouth.",
 			"text": "Computer science student specialising in cybersecurity at WSIiZ. Frontend developer: React, Next.js, Tailwind CSS."
 		},
 		"supervisor": {

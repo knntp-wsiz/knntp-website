@@ -156,6 +156,7 @@
 		"leader": {
 			"name": "Eryk Kunasz",
 			"role": "Lider KNNTP",
+			"photoAlt": "Czarny kot z banknotem dwudziestodolarowym w pysku.",
 			"text": "Student informatyki o specjalizacji cyberbezpieczeństwo na WSIiZ. Frontend developer: React, Next.js, Tailwind CSS."
 		},
 		"supervisor": {
