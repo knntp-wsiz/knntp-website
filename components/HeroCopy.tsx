@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useHeroTyping } from "./HeroTyping";
 
 type Props = {
 	title: string;
@@ -19,18 +20,20 @@ export default function HeroCopy({ title, fullName, offer }: Props) {
 	const texts = [title, fullName, offer];
 	const [counts, setCounts] = useState([0, 0, 0]);
 	const [active, setActive] = useState(-1);
+	const { finish } = useHeroTyping();
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: teksty są stałe dla danego renderu strony
+	// biome-ignore lint/correctness/useExhaustiveDependencies: teksty są stałe dla danego renderu strony, finish jest stabilne
 	useEffect(() => {
 		const full = texts.map((t) => t.length);
 		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
 			setCounts(full);
+			finish();
 			return;
 		}
 
 		let cancelled = false;
-		const perChar = 24 + Math.random() * 52;
-		const weights = [2.6, 1, 0.8];
+		const perChar = 14 + Math.random() * 26;
+		const weights = [3, 0.9, 0.7];
 
 		(async () => {
 			await wait(260 + Math.random() * 520);
@@ -39,13 +42,14 @@ export default function HeroCopy({ title, fullName, offer }: Props) {
 				for (let i = 1; i <= full[line] && !cancelled; i++) {
 					setCounts((prev) => prev.map((c, k) => (k === line ? i : c)));
 					const ch = texts[line][i - 1];
-					const pause = ch === " " ? 0.6 : /[.,:]/.test(ch) ? 5 : 1;
+					const pause = ch === " " ? 0.6 : /[.,:]/.test(ch) ? 3.5 : 1;
 					await wait(
 						perChar * weights[line] * pause * (0.45 + Math.random() * 1.1),
 					);
 				}
-				await wait(160 + Math.random() * 520);
+				await wait(120 + Math.random() * 380);
 			}
+			finish();
 			await wait(2800);
 			if (!cancelled) setActive(-1);
 		})();
@@ -66,7 +70,11 @@ export default function HeroCopy({ title, fullName, offer }: Props) {
 	return (
 		<>
 			<noscript>
-				<style>{".tw-rest{opacity:1!important}"}</style>
+				<style>
+					{
+						".tw-rest{opacity:1!important}.hero-reveal{opacity:1!important;visibility:visible!important;transform:none!important}"
+					}
+				</style>
 			</noscript>
 			<h1 id="hero-title">
 				<span className="block text-[clamp(4.5rem,17vw,6rem)] font-bold leading-[0.9] tracking-tight">

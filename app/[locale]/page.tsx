@@ -5,6 +5,7 @@ import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 import DotGrid from "@/components/DotGrid";
 import HeroCopy from "@/components/HeroCopy";
+import { HeroReveal, HeroTypingProvider } from "@/components/HeroTyping";
 import HeroVideo from "@/components/HeroVideo";
 import { isLocale, type Locale, localePath } from "@/i18n/config";
 import { format, getMessages } from "@/i18n/messages";
@@ -51,37 +52,41 @@ export default async function Home({
 				<HeroVideo src="/video/clouds.mp4" />
 				<DotGrid className="absolute inset-0 h-full w-full" />
 				<div className="pointer-events-none relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-4 py-24 text-center sm:px-6">
-					<HeroCopy
-						title="KNNTP"
-						fullName={m.hero.fullName}
-						offer={m.hero.offer}
-					/>
-					<div className="pointer-events-auto mt-9 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
-						<a href="/forms" className={primaryButton}>
-							{m.hero.join}
-							<FiArrowRight aria-hidden="true" />
-						</a>
-						<a
-							href={DISCORD_URL}
-							target="_blank"
-							rel="noopener noreferrer"
-							className={secondaryButton}
-						>
-							<FaDiscord aria-hidden="true" />
-							{m.hero.discord}
-							<span className="sr-only">{m.a11y.externalLink}</span>
-						</a>
-					</div>
-					<p className="pointer-events-auto mt-12 max-w-xl border-t border-line-soft pt-5 font-mono text-sm text-muted">
-						<span className="text-accent">{m.hero.latestLabel}</span>
-						{" / "}
-						<Link
-							href={localePath(locale, "/blog/hackyeah-2026")}
-							className="text-text underline decoration-line hover:decoration-accent"
-						>
-							{m.hero.latest}
-						</Link>
-					</p>
+					<HeroTypingProvider>
+						<HeroCopy
+							title="KNNTP"
+							fullName={m.hero.fullName}
+							offer={m.hero.offer}
+						/>
+						<HeroReveal className="flex w-full flex-col items-center">
+							<div className="pointer-events-auto mt-9 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
+								<a href="/forms" className={primaryButton}>
+									{m.hero.join}
+									<FiArrowRight aria-hidden="true" />
+								</a>
+								<a
+									href={DISCORD_URL}
+									target="_blank"
+									rel="noopener noreferrer"
+									className={secondaryButton}
+								>
+									<FaDiscord aria-hidden="true" />
+									{m.hero.discord}
+									<span className="sr-only">{m.a11y.externalLink}</span>
+								</a>
+							</div>
+							<p className="pointer-events-auto mt-12 max-w-xl border-t border-line-soft pt-5 font-mono text-sm text-muted">
+								<span className="text-accent">{m.hero.latestLabel}</span>
+								{" / "}
+								<Link
+									href={localePath(locale, "/blog/hackyeah-2026")}
+									className="text-text underline decoration-line hover:decoration-accent"
+								>
+									{m.hero.latest}
+								</Link>
+							</p>
+						</HeroReveal>
+					</HeroTypingProvider>
 				</div>
 			</section>
 

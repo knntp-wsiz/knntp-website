@@ -18,12 +18,14 @@ export default function HeroVideo({ src }: { src: string }) {
 		const reduced = window.matchMedia(
 			"(prefers-reduced-motion: reduce)",
 		).matches;
+		// Telefony dostają czyste tło: oszczędzamy transfer i baterię.
+		const narrow = !window.matchMedia("(min-width: 640px)").matches;
 		const connection = (
 			navigator as Navigator & {
 				connection?: NetworkInformation;
 			}
 		).connection;
-		if (!reduced && !connection?.saveData) setEnabled(true);
+		if (!reduced && !narrow && !connection?.saveData) setEnabled(true);
 	}, []);
 
 	useEffect(() => {
