@@ -12,6 +12,8 @@ const ALLOW_EMPTY = [/\.extra$/, /\.credit$/, /\.photoAlts$/];
 /** Wartości, które celowo brzmią tak samo w obu językach (nazwy własne). */
 const ALLOW_SAME = [
 	/\.name$/,
+	/\.place$/,
+	/\.credit$/,
 	/^meta\.siteName$/,
 	/^meta\.titleTemplate$/,
 	/^lang\./,

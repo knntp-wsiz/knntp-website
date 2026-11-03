@@ -12,7 +12,7 @@ type Props = {
 	messages: Pick<Messages, "nav" | "a11y" | "lang">;
 };
 
-const SECTIONS = ["about", "hackathons", "why", "team"] as const;
+const SECTIONS = ["about", "hackathons", "programs", "why", "team"] as const;
 
 /** Ścieżka bieżącej strony bez prefiksu języka, niezależnie od tego, czy rewrite go zostawił. */
 function stripLocale(pathname: string) {
