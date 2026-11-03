@@ -8,3 +8,6 @@ export const LEADER = {
 	linkedin: "https://www.linkedin.com/in/eryk-kunasz/",
 };
 export const SUPERVISOR_URL = "https://wsiz.edu.pl/kadra-akademicka/mjaszuk/";
+
+/** Identyfikator projektu Microsoft Clarity (analityka, publiczny z założenia). */
+export const CLARITY_ID = "z81nc68oo5";

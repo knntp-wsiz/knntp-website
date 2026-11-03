@@ -5,6 +5,7 @@ import {
 	JetBrains_Mono,
 } from "next/font/google";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import "../globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -12,7 +13,7 @@ import { isLocale, LOCALES, type Locale } from "@/i18n/config";
 import { format, getMessages } from "@/i18n/messages";
 import { INTRO_BOOT_SCRIPT } from "@/lib/intro";
 import { alternates, openGraph } from "@/lib/seo";
-import { DISCORD_URL, GITHUB_ORG_URL, SITE_URL } from "@/lib/site";
+import { CLARITY_ID, DISCORD_URL, GITHUB_ORG_URL, SITE_URL } from "@/lib/site";
 
 const display = Barlow_Condensed({
 	variable: "--font-display-src",
@@ -132,6 +133,11 @@ export default async function LocaleLayout({
 					// biome-ignore lint/security/noDangerouslySetInnerHtml: statyczny JSON-LD zbudowany z własnych stałych
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
 				/>
+				{process.env.NODE_ENV === "production" && (
+					<Script id="ms-clarity" strategy="afterInteractive">
+						{`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",${JSON.stringify(CLARITY_ID)});`}
+					</Script>
+				)}
 				<a
 					href="#main"
 					className="sr-only z-[60] bg-accent px-4 py-2 font-semibold text-on-accent focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
