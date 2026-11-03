@@ -64,14 +64,14 @@ export async function generateMetadata({
 		openGraph: openGraph(
 			locale,
 			"/",
-			meta.title,
-			meta.description,
+			meta.ogTitle,
+			meta.ogDescription,
 			meta.siteName,
 		),
 		twitter: {
 			card: "summary_large_image",
-			title: meta.title,
-			description: meta.description,
+			title: meta.ogTitle,
+			description: meta.ogDescription,
 		},
 		robots: {
 			index: true,
