@@ -15,9 +15,9 @@ Not everything we do is a hackathon. Several people from our club took part in *
 
 It is an AI internship programme where interns build real apps for non-profit organisations, and the organisations get them for free. Students work in teams under mentors from mobitouch: from requirements, through code reviews and stand-ups, to deployment. The tracks were AI Developer (.NET, Fullstack, Flutter), AI Product Manager and Marketing & Content.
 
-## The second edition in its current form
+## The third edition
 
-The 2026 edition is the second round of the programme in its current form, the first ran in 2025. About 100 people applied and **23 students from five universities** made it in. Over 15 weeks the teams put in more than 6,300 hours, some at the office, some remotely.
+The 2026 edition is the third round of the programme, the previous one ran in 2025. About 100 people applied and **23 students from five universities** made it in. Over 15 weeks the teams put in more than 6,300 hours, some at the office, some remotely.
 
 ## 10 projects for 10 organisations
 
