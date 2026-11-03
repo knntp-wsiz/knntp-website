@@ -3,9 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
-import Clouds from "@/components/Clouds";
 import DotGrid from "@/components/DotGrid";
 import HeroCopy from "@/components/HeroCopy";
+import HeroVideo from "@/components/HeroVideo";
 import { isLocale, type Locale, localePath } from "@/i18n/config";
 import { format, getMessages } from "@/i18n/messages";
 import { getPosts } from "@/lib/blog";
@@ -48,7 +48,7 @@ export default async function Home({
 				aria-labelledby="hero-title"
 				className="relative flex min-h-[calc(100svh-4rem)] items-center justify-center overflow-hidden border-b border-line-soft"
 			>
-				<Clouds />
+				<HeroVideo src="/video/clouds.mp4" />
 				<DotGrid className="absolute inset-0 h-full w-full" />
 				<div className="pointer-events-none relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-4 py-24 text-center sm:px-6">
 					<HeroCopy
