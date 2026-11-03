@@ -1,5 +1,5 @@
 ---
-title: "mLab AI 2025: the first internship edition, 6 apps for NGOs"
+title: "mLab AI 2025: the second internship edition, 6 apps for NGOs"
 description: 20 interns built 6 apps for non-profits in the Podkarpacie region. Members of KNNTP were among them.
 date: 2025-12-01
 cover: /events/mlab-2025/group.jpg
@@ -9,7 +9,7 @@ sourceName: mlab.mobitouch.net
 photoCredit: mLab / mobitouch
 ---
 
-**mLab AI** is an internship programme run by **mobitouch** from Rzeszów. The 2025 edition was the first in its current form, and members of our club were among the interns.
+**mLab AI** is an internship programme run by **mobitouch** from Rzeszów. The 2025 edition was the second round of the programme, and members of our club were among the interns.
 
 ## What they built
 
@@ -21,4 +21,4 @@ The interns had mentors from mobitouch who guided them from requirements to depl
 
 ## What next
 
-A year later came the second edition with 23 students from five universities. Read the [post about mLab AI 2026](/blog/mlab-ai-2026). Want to try next time? [Join the club](/forms).
+A year later came the third edition with 23 students from five universities. Read the [post about mLab AI 2026](/blog/mlab-ai-2026). Want to try next time? [Join the club](/forms).

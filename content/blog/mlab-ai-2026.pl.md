@@ -15,9 +15,9 @@ Nie wszystko, co robimy, to hackathony. Kilka osób z naszego koła wzięło udz
 
 To program praktyk AI, w którym praktykanci budują prawdziwe aplikacje dla organizacji pozarządowych, a organizacje dostają je bezpłatnie. Studenci pracują w zespołach pod okiem mentorów z mobitouch: od wymagań, przez code review i stand-upy, po wdrożenie. Do wyboru były ścieżki AI Developer (.NET, Fullstack, Flutter), AI Product Manager oraz Marketing & Content.
 
-## Druga edycja w obecnej formule
+## Trzecia edycja
 
-Edycja 2026 to druga odsłona programu w obecnej formule, pierwsza odbyła się w 2025 roku. Zgłosiło się około 100 osób, a do programu weszło **23 studentów z pięciu uczelni**. Przez 15 tygodni zespoły przepracowały ponad 6 300 godzin, część w biurze, część zdalnie.
+Edycja 2026 to trzecia odsłona programu, poprzednia odbyła się w 2025 roku. Zgłosiło się około 100 osób, a do programu weszło **23 studentów z pięciu uczelni**. Przez 15 tygodni zespoły przepracowały ponad 6 300 godzin, część w biurze, część zdalnie.
 
 ## 10 projektów dla 10 organizacji
 
