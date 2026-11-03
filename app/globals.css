@@ -287,3 +287,21 @@ html[data-intro="seen"] .hero-reveal[data-state="pending"] {
 		transition: none;
 	}
 }
+
+/* Zdjęcia we wpisach: pełna szerokość kolumny, podpis w kursywie pod spodem. */
+.prose-post img {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-top: 2rem;
+}
+
+.prose-post img + em {
+	display: block;
+	margin-top: 0.6rem;
+	margin-bottom: 2rem;
+	font-family: var(--font-mono);
+	font-size: 0.8125rem;
+	font-style: normal;
+	color: var(--muted);
+}
