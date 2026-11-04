@@ -30,6 +30,7 @@ export default function Header({ locale, messages }: Props) {
 
 	const items = [
 		...SECTIONS.map((id) => ({ label: nav[id], href: `${home}#${id}` })),
+		{ label: nav.courses, href: localePath(locale, "/courses") },
 		{ label: nav.blog, href: localePath(locale, "/blog") },
 	];
 

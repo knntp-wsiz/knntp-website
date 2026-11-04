@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img">
+  <defs>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#64aec9" fill-opacity="0.22"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#0c1319"/>
+  <rect width="1200" height="800" fill="url(#dots)"/>
+  <path d="M0 740H300V690H620" fill="none" stroke="#64aec9" stroke-opacity="0.35" stroke-width="2"/>
+  <circle cx="620" cy="690" r="7" fill="#64aec9"/>
+  <text x="80" y="300" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="54" fill="#8a9aa6">
+    <tspan x="80" dy="0" fill="#64aec9">name</tspan><tspan> = </tspan><tspan fill="#d7e3ea">"KNNTP"</tspan>
+    <tspan x="80" dy="84" fill="#64aec9">print</tspan><tspan>(</tspan><tspan fill="#d7e3ea">"Hello, "</tspan><tspan> + name)</tspan>
+    <tspan x="80" dy="84" fill="#64aec9">for</tspan><tspan> i </tspan><tspan fill="#64aec9">in</tspan><tspan> range(</tspan><tspan fill="#d7e3ea">3</tspan><tspan>):</tspan>
+    <tspan x="128" dy="84" fill="#64aec9">print</tspan><tspan>(i)</tspan>
+  </text>
+  <text x="1120" y="190" text-anchor="end" font-family="'Arial Narrow', Arial, sans-serif" font-weight="700" font-size="220" fill="#64aec9" fill-opacity="0.9">1</text>
+</svg>

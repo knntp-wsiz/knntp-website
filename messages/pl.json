@@ -40,6 +40,7 @@
 		"about": "Co robimy",
 		"hackathons": "Hackathony",
 		"programs": "Staże",
+		"courses": "Kursy",
 		"why": "Dlaczego warto",
 		"team": "Zespół",
 		"blog": "Blog",
@@ -274,6 +275,243 @@
 					"Rozmowa mentoringowa na kanapach w biurze mobitouch, jeden z uczestników pracuje na laptopie.",
 					"Uczestnik prezentuje na scenie aplikację dla nauczycieli, wyświetlaną na ekranie za nim."
 				]
+			}
+		}
+	},
+	"courses": {
+		"title": "Kursy",
+		"lead": "Sprawdzone kursy i certyfikaty z programowania i AI: darmowe i płatne, z informacją, co daje certyfikat i ile kosztuje.",
+		"cta": "Zobacz kursy",
+		"description": "Katalog poważnych kursów i certyfikatów z programowania i AI: darmowe i płatne, z filtrem certyfikatu i jego kosztu. Anthropic Academy, CS50, freeCodeCamp, Cisco i inne.",
+		"filtersLabel": "Filtry kursów",
+		"filters": {
+			"topic": {
+				"label": "Temat",
+				"all": "Wszystkie",
+				"programming": "Programowanie",
+				"ai": "AI"
+			},
+			"price": {
+				"label": "Cena kursu",
+				"all": "Wszystkie",
+				"free": "Darmowe",
+				"paid": "Płatne"
+			},
+			"certificate": {
+				"label": "Certyfikat",
+				"all": "Wszystkie",
+				"yes": "Z certyfikatem",
+				"no": "Bez certyfikatu"
+			},
+			"certificateCost": {
+				"label": "Koszt certyfikatu",
+				"all": "Wszystkie",
+				"free": "Bezpłatny",
+				"paid": "Płatny"
+			}
+		},
+		"searchLabel": "Szukaj kursu",
+		"searchPlaceholder": "Szukaj, np. Python, Claude",
+		"count": "Pokazane pozycje: {shown} z {total}",
+		"empty": "Żadna pozycja nie pasuje do tych filtrów.",
+		"reset": "Wyczyść filtry",
+		"details": "Szczegóły",
+		"groups": {
+			"free": "Darmowe",
+			"paid": "Płatne"
+		},
+		"badges": {
+			"certNone": "Bez certyfikatu",
+			"certFree": "Certyfikat bezpłatny",
+			"certPaid": "Certyfikat płatny",
+			"free": "Darmowy",
+			"paid": "Płatny"
+		},
+		"kinds": {
+			"course": "Kurs",
+			"exam": "Egzamin"
+		},
+		"levels": {
+			"beginner": "Początkujący",
+			"intermediate": "Średni",
+			"advanced": "Zaawansowany"
+		},
+		"languages": {
+			"en": "angielski"
+		},
+		"hours": "{n} godz.",
+		"coverAlt": "Okładka: {name}.",
+		"detail": {
+			"back": "Wszystkie kursy",
+			"how": "Jak to wygląda",
+			"facts": "W skrócie",
+			"kind": "Rodzaj",
+			"provider": "Organizator",
+			"price": "Cena",
+			"certificate": "Certyfikat",
+			"level": "Poziom",
+			"duration": "Czas",
+			"language": "Język",
+			"checked": "Dane sprawdzone",
+			"open": "Przejdź do strony kursu",
+			"noCertificate": "Brak",
+			"sourceNote": "Ceny i warunki podajemy za stroną organizatora na dzień sprawdzenia i mogą się zmienić."
+		},
+		"items": {
+			"claude-code-101": {
+				"summary": "Czym jest agent kodujący Claude Code i jak działa: pętla agentowa, kontekst, narzędzia i uprawnienia, plus instalacja w terminalu, VS Code lub JetBrains.",
+				"how": "Kurs online po angielsku: 12 lekcji i quiz. Po zaliczeniu quizu dostajesz odznakę ukończenia (to nie jest egzamin ani certyfikat zawodowy). Strona nie podaje poziomu trudności. Wymagana jest podstawowa znajomość edytora kodu i wiersza poleceń.",
+				"certificateName": "Odznaka ukończenia Anthropic Academy"
+			},
+			"claude-code-in-action": {
+				"summary": "Długie, samodzielne sesje Claude Code, którym można ufać: sterowanie, konfiguracja, automatyzacja i weryfikacja pracy agenta.",
+				"how": "Kurs online po angielsku: 9 lekcji i quiz. Po zaliczeniu quizu dostajesz odznakę ukończenia (to nie jest egzamin ani certyfikat zawodowy). Strona nie podaje poziomu trudności.",
+				"certificateName": "Odznaka ukończenia Anthropic Academy"
+			},
+			"claude-platform-101": {
+				"summary": "Budowanie na Claude Platform od podstaw, z perspektywy dewelopera.",
+				"how": "Kurs online po angielsku: 13 lekcji i quiz. Po zaliczeniu quizu dostajesz odznakę ukończenia (to nie jest egzamin ani certyfikat zawodowy). Strona nie podaje poziomu trudności. Wymaga swobody w czytaniu i pisaniu kodu w co najmniej jednym języku oraz podstaw wiersza poleceń. Nowe konta API dostają niewielki darmowy kredyt, potem API jest płatne.",
+				"certificateName": "Odznaka ukończenia Anthropic Academy"
+			},
+			"building-with-the-claude-api": {
+				"summary": "Pełne spektrum pracy z modelami Anthropic przez Claude API: prompting, tool use, RAG, agenci, MCP i wzorce produkcyjne.",
+				"how": "Kurs online po angielsku: 67 lekcji i 8 quizów. Po zaliczeniu quizu dostajesz odznakę ukończenia (to nie jest egzamin ani certyfikat zawodowy). Strona nie podaje poziomu trudności.",
+				"certificateName": "Odznaka ukończenia Anthropic Academy"
+			},
+			"tool-use-with-the-messages-api": {
+				"summary": "Jak sprawić, by tool use działał niezawodniej, szybciej i taniej, oraz jak korzystać z narzędzi dostarczanych przez Anthropic.",
+				"how": "Kurs online po angielsku: 9 lekcji i quiz. Po zaliczeniu quizu dostajesz odznakę ukończenia (to nie jest egzamin ani certyfikat zawodowy). Strona nie podaje poziomu trudności. Wymaga ręcznego napisania pętli narzędzi, więc najpierw przerób Claude Platform 101.",
+				"certificateName": "Odznaka ukończenia Anthropic Academy"
+			},
+			"introduction-to-model-context-protocol": {
+				"summary": "Budowa serwerów i klientów MCP od zera w Python SDK oraz trzy podstawowe prymitywy: tools, resources i prompts.",
+				"how": "Kurs online po angielsku: 10 lekcji i quiz. Po zaliczeniu quizu dostajesz odznakę ukończenia (to nie jest egzamin ani certyfikat zawodowy). Strona nie podaje poziomu trudności.",
+				"certificateName": "Odznaka ukończenia Anthropic Academy"
+			},
+			"model-context-protocol-advanced-topics": {
+				"summary": "Zaawansowane MCP: sampling, notifications i roots, z interaktywnymi przeglądami przepływów protokołu.",
+				"how": "Kurs online po angielsku: 11 lekcji i quiz. Po zaliczeniu quizu dostajesz odznakę ukończenia (to nie jest egzamin ani certyfikat zawodowy). Strona nie podaje poziomu trudności.",
+				"certificateName": "Odznaka ukończenia Anthropic Academy"
+			},
+			"introduction-to-evals": {
+				"summary": "Mały eval na własnych danych: wybór modelu najpierw wg trafności, potem kosztu, poprawa promptu przed zmianą modelu i kontrola po wdrożeniu.",
+				"how": "Kurs online po angielsku: 4 lekcje i quiz. Po zaliczeniu quizu dostajesz odznakę ukończenia (to nie jest egzamin ani certyfikat zawodowy). Strona nie podaje poziomu trudności. Wymaga umiejętności wywołania Messages API.",
+				"certificateName": "Odznaka ukończenia Anthropic Academy"
+			},
+			"introduction-to-subagents": {
+				"summary": "Rozkładanie złożonych zadań na równoległe subagenty Claude i deterministyczna orkiestracja, projektowanie niezawodnych subagentów oraz antywzorce.",
+				"how": "Kurs online po angielsku: 4 lekcje. Strona zaznacza, że kurs nie ma odznaki ukończenia. Strona nie podaje poziomu trudności.",
+				"certificateName": ""
+			},
+			"introduction-to-agent-skills": {
+				"summary": "Tworzenie, konfigurowanie i udostępnianie skills w Claude Code, czyli markdownowych instrukcji stosowanych automatycznie.",
+				"how": "Kurs online po angielsku: 6 lekcji. Strona zaznacza, że kurs nie ma odznaki ukończenia. Strona nie podaje poziomu trudności.",
+				"certificateName": ""
+			},
+			"claude-certified-developer-foundations": {
+				"summary": "Certyfikat w roli Developer (CCDV-F). Liczy się do statusu organizacji w Claude Partner Network.",
+				"how": "Egzamin: pytania jednokrotnego wyboru i scenariuszowe wielokrotnego wyboru, 120 minut, bez materiałów, próg zaliczenia 720 w skali 100–1000. Zdajesz online (Pearson OnVUE) lub w centrum Pearson VUE, minimalny wiek to 18 lat. Cena 125 USD jest przed rabatami partnerskimi, a poprawka kosztuje tyle samo. Certyfikat jest ważny 12 miesięcy, odnowienie w terminie to bezpłatna ocena bez nadzoru. Egzamin mogą zdawać tylko pracownicy organizacji z Claude Partner Network (wymagany firmowy adres e-mail, osobisty nie działa), więc student bez takiej firmy nie przystąpi do niego. Od 7.12.2026 egzaminy dostają nową treść.",
+				"certificateName": "Claude Certified Developer - Foundations"
+			},
+			"claude-certified-associate-foundations": {
+				"summary": "Certyfikat w roli Practitioner/Associate (CCAO-F). Nie liczy się do statusu w Claude Partner Network.",
+				"how": "Egzamin: pytania jednokrotnego wyboru i scenariuszowe wielokrotnego wyboru, 120 minut, bez materiałów, próg zaliczenia 720 w skali 100–1000. Zdajesz online (Pearson OnVUE) lub w centrum Pearson VUE, minimalny wiek to 18 lat. Cena 99 USD jest przed rabatami partnerskimi, a poprawka kosztuje tyle samo. Certyfikat jest ważny 12 miesięcy, odnowienie w terminie to bezpłatna ocena bez nadzoru. Egzamin mogą zdawać tylko pracownicy organizacji z Claude Partner Network (wymagany firmowy adres e-mail, osobisty nie działa), więc student bez takiej firmy nie przystąpi do niego. Od 7.12.2026 egzaminy dostają nową treść.",
+				"certificateName": "Claude Certified Associate - Foundations"
+			},
+			"claude-certified-architect-foundations": {
+				"summary": "Potwierdza, że architekt potrafi budować z Claude (CCAR-F). Brak formalnego wymogu wstępnego.",
+				"how": "Egzamin: pytania jednokrotnego wyboru i scenariuszowe wielokrotnego wyboru, 120 minut, bez materiałów, próg zaliczenia 720 w skali 100–1000. Zdajesz online (Pearson OnVUE) lub w centrum Pearson VUE, minimalny wiek to 18 lat. Cena 125 USD jest przed rabatami partnerskimi, a poprawka kosztuje tyle samo. Certyfikat jest ważny 12 miesięcy, odnowienie w terminie to bezpłatna ocena bez nadzoru. Egzamin mogą zdawać tylko pracownicy organizacji z Claude Partner Network (wymagany firmowy adres e-mail, osobisty nie działa), więc student bez takiej firmy nie przystąpi do niego. Od 7.12.2026 egzaminy dostają nową treść. Cena wzrosła z 99 na 125 USD od 30.06.2026.",
+				"certificateName": "Claude Certified Architect - Foundations"
+			},
+			"claude-certified-architect-professional": {
+				"summary": "Potwierdza projektowanie i nadzorowanie rozwiązań z Claude na skalę enterprise (CCAR-P). Nie wymaga posiadania Foundations.",
+				"how": "Egzamin: pytania jednokrotnego wyboru i scenariuszowe wielokrotnego wyboru, 120 minut, bez materiałów, próg zaliczenia 720 w skali 100–1000. Zdajesz online (Pearson OnVUE) lub w centrum Pearson VUE, minimalny wiek to 18 lat. Cena 175 USD jest przed rabatami partnerskimi, a poprawka kosztuje tyle samo. Certyfikat jest ważny 12 miesięcy, odnowienie w terminie to bezpłatna ocena bez nadzoru. Egzamin mogą zdawać tylko pracownicy organizacji z Claude Partner Network (wymagany firmowy adres e-mail, osobisty nie działa), więc student bez takiej firmy nie przystąpi do niego. Od 7.12.2026 egzaminy dostają nową treść.",
+				"certificateName": "Claude Certified Architect - Professional"
+			},
+			"python-essentials-1": {
+				"summary": "Kurs o podstawach języka Python, przygotowany przez Cisco Networking Academy i Python Institute. Nie wymaga doświadczenia w programowaniu.",
+				"how": "Bezpłatny kurs online na NetAcad. Sam kurs nie ma opisanego certyfikatu. Przygotowuje do płatnego egzaminu PCEP, który zdaje się osobno.",
+				"certificateName": ""
+			},
+			"python-essentials-2": {
+				"summary": "Kurs programowania w Pythonie na poziomie średniozaawansowanym, który przygotowuje do certyfikacji. Prowadzą go Cisco Networking Academy i Python Institute.",
+				"how": "Bezpłatny kurs online na NetAcad, ciąg dalszy Python Essentials 1. Strona kursu nie opisuje certyfikatu za samo ukończenie, więc oznaczamy go jako bez certyfikatu.",
+				"certificateName": ""
+			},
+			"pcep": {
+				"summary": "Egzamin z podstaw Pythona (PCEP-30-03). Darmowy kurs Python Essentials 1 przygotowuje do niego.",
+				"how": "Egzamin ma 35 pytań i trwa 50 minut, próg zaliczenia to 70%, zdajesz online. Certyfikat jest ważny 5 lat. Cena zależy od waluty, a voucher kupuje się w OpenEDG Store (dokładnej kwoty strona nie podaje).",
+				"certificateName": "PCEP"
+			},
+			"pcap": {
+				"summary": "Średniozaawansowany egzamin z Pythona (PCAP-31-04). Zalecana jest wiedza na poziomie PCEP.",
+				"how": "Egzamin ma 42 pytania i trwa 65 minut, próg zaliczenia to 72%. Voucher kupuje się w OpenEDG Store (dokładnej kwoty strona nie podaje).",
+				"certificateName": "PCAP"
+			},
+			"cs50x": {
+				"summary": "Wprowadzenie Harvardu do informatyki i programowania, dla studentów kierunków informatycznych i nie tylko.",
+				"how": "Kurs można przerobić za darmo przez OpenCourseWare (11 tygodni materiału). Certyfikat jest płatny: verified certificate z edX (kwoty strona CS50 nie podaje). Bez niego zostaje sam kurs, bez certyfikatu.",
+				"certificateName": "Verified certificate (edX)"
+			},
+			"cs50-ai": {
+				"summary": "Koncepcje i algorytmy nowoczesnego AI, m.in. niepewność, optymalizacja, uczenie, sieci neuronowe i język.",
+				"how": "Kurs jest darmowy przez OpenCourseWare (7 tygodni materiału). Certyfikat jest płatny: verified certificate z edX (kwoty strona nie podaje). Poziomu trudności strona nie określa.",
+				"certificateName": "Verified certificate (edX)"
+			},
+			"freecodecamp": {
+				"summary": "Samodzielna nauka programowania z projektami, prowadzona przez organizację non-profit.",
+				"how": "Strona pisze, że bezpłatne jest wszystko: kursy, projekty i certyfikaty. Jeden certyfikat to około 300 godzin nauki. Pełnej listy certyfikatów strona nie pokazała w momencie sprawdzania.",
+				"certificateName": "Certyfikaty freeCodeCamp"
+			},
+			"the-odin-project": {
+				"summary": "Darmowy kurs full stack: ścieżka Foundations, a potem Full Stack JavaScript (7 kursów) albo Ruby on Rails (8 kursów).",
+				"how": "Otwarty program nauczania, finansowany przez społeczność. Strona nie opisuje certyfikatu.",
+				"certificateName": ""
+			},
+			"mit-6-0001": {
+				"summary": "Kurs MIT dla osób bez doświadczenia w programowaniu: rola obliczeń w rozwiązywaniu problemów i pisanie małych programów w Pythonie.",
+				"how": "Materiały do pobrania na licencji CC BY-NC-SA 4.0. Strona wspomina Python 3.5, więc część materiałów jest starsza. OpenCourseWare nie wystawia certyfikatów.",
+				"certificateName": ""
+			},
+			"huggingface-llm-course": {
+				"summary": "Kurs o dużych modelach językowych i ekosystemie bibliotek Hugging Face.",
+				"how": "Strona pisze, że kurs jest całkowicie darmowy i bez reklam. Każdy rozdział to około tygodnia nauki po 6–8 godzin tygodniowo. Wymaga dobrej znajomości Pythona, zalecany jest wcześniejszy kurs deep learning. Certyfikatu strona nie opisuje.",
+				"certificateName": ""
+			},
+			"fastai-practical-deep-learning": {
+				"summary": "Praktyczne deep learning i uczenie maszynowe z użyciem PyTorch, fastai i Hugging Face; część 2 prowadzi od fundamentów do Stable Diffusion.",
+				"how": "Darmowy kurs dla osób z pewnym doświadczeniem w kodowaniu (rok kodowania, najlepiej w Pythonie, i matematyka z liceum). Dziewięć lekcji po około 90 minut. Certyfikatu strona nie opisuje.",
+				"certificateName": ""
+			},
+			"machine-learning-specialization": {
+				"summary": "Uczenie nadzorowane i nienadzorowane, sieci neuronowe, drzewa decyzyjne, systemy rekomendacyjne i deep RL (NumPy, scikit-learn, TensorFlow). Prowadzi Andrew Ng.",
+				"how": "Płatna subskrypcja Coursera (49 USD miesięcznie według strony). Około 2 miesięcy po 10 godzin tygodniowo. Możliwa jest pomoc finansowa, a tryb audytu jest darmowy, ale bez certyfikatu. Certyfikat dostajesz za każdy kurs i za całą specjalizację.",
+				"certificateName": "Certyfikat specjalizacji (Coursera)"
+			},
+			"deep-learning-specialization": {
+				"summary": "Sieci neuronowe i deep learning w pięciu kursach.",
+				"how": "Płatny na Coursera (kwoty nie udało się potwierdzić na stronie). Około 3 miesięcy po 10 godzin tygodniowo. Za ukończenie dostajesz certyfikat specjalizacji.",
+				"certificateName": "Certyfikat specjalizacji (Coursera)"
+			},
+			"azure-ai-fundamentals": {
+				"summary": "Egzamin AI-901 (zastąpił AI-900): obciążenia AI, podstawy ML na Azure, vision, NLP i generative AI, a po aktualizacji z 15.04.2026 także wdrażanie rozwiązań w Microsoft Foundry.",
+				"how": "Próg zaliczenia to 700. Cena zależy od kraju (strona nie podaje kwoty). Egzamin jest dostępny w 13 językach, ale nie po polsku. Wymagana jest znajomość składni Pythona.",
+				"certificateName": "Microsoft Certified: Azure AI Fundamentals"
+			},
+			"aws-ai-practitioner": {
+				"summary": "Wiedza o AI, ML i generative AI oraz ich zastosowaniach (poziom Foundational).",
+				"how": "Egzamin ma 65 pytań i trwa 90 minut. Przygotowanie wspierają darmowe szkolenia AWS w Exam Prep Plans, ale sam egzamin kosztuje 100 USD.",
+				"certificateName": "AWS Certified AI Practitioner"
+			},
+			"kcna": {
+				"summary": "Podstawy Kubernetes (44%), orkiestracja kontenerów (28%), dostarczanie aplikacji cloud native (16%) i architektura cloud native (12%). Bez wymagań wstępnych.",
+				"how": "Egzamin trwa 90 minut i jest zdawany online pod nadzorem. Sam egzamin kosztuje 250 USD (299 USD razem z kursem LFS250). Certyfikat jest ważny 2 lata.",
+				"certificateName": "KCNA"
+			},
+			"cka": {
+				"summary": "Praktyczny egzamin zadaniowy z administracji Kubernetes.",
+				"how": "Egzamin trwa 2 godziny i polega na rozwiązywaniu zadań w linii poleceń (Kubernetes v1.37). Sam egzamin kosztuje 445 USD (645 USD razem z kursem LFS258) i obejmuje dwa podejścia. Strona nie określa poziomu trudności.",
+				"certificateName": "CKA"
 			}
 		}
 	}

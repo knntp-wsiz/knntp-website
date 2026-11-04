@@ -8,11 +8,17 @@ const root = process.cwd();
 const LOCALES = ["pl", "en"];
 const BASE = "pl";
 /** Klucze, które mogą być puste w każdym języku (np. brak zdjęć lub dopisku). */
-const ALLOW_EMPTY = [/\.extra$/, /\.credit$/, /\.photoAlts$/];
+const ALLOW_EMPTY = [
+	/\.extra$/,
+	/\.credit$/,
+	/\.photoAlts$/,
+	/\.certificateName$/,
+];
 /** Wartości, które celowo brzmią tak samo w obu językach (nazwy własne). */
 const ALLOW_SAME = [
 	/\.name$/,
 	/\.place$/,
+	/\.certificateName$/,
 	/\.credit$/,
 	/^meta\.siteName$/,
 	/^meta\.titleTemplate$/,
