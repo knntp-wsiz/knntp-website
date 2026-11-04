@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img">
+  <defs>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#64aec9" fill-opacity="0.22"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#0c1319"/>
+  <rect width="1200" height="800" fill="url(#dots)"/>
+  <path d="M0 740H300V690H620" fill="none" stroke="#64aec9" stroke-opacity="0.35" stroke-width="2"/>
+  <circle cx="620" cy="690" r="7" fill="#64aec9"/>
+  <text x="80" y="120" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="34" fill="#64aec9">Anthropic Academy</text>
+  <text font-family="'Arial Narrow', Arial, sans-serif" font-weight="700" font-size="76" fill="#e6eef3"><tspan x="80" y="325">Building with the</tspan><tspan x="80" y="415">Claude API</tspan></text>
+  <text x="80" y="640" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="30" fill="#8a9aa6">COURSE / AI</text>
+</svg>
