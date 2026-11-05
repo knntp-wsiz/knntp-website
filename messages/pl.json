@@ -54,6 +54,27 @@
 		"latestLabel": "Najnowsze",
 		"latest": "HackYeah 2026: student WSIiZ wygrał kategorię Smart City"
 	},
+	"themes": {
+		"title": "Główne motywy",
+		"lead": "Wokół tych trzech tematów będzie kręcić się praca koła.",
+		"items": [
+			{
+				"name": "AI",
+				"text": "Nauka programowania z AI.",
+				"topics": ["Claude Code", "vibecoding", "MCP"]
+			},
+			{
+				"name": "Gamedev",
+				"text": "Programowanie i tworzenie gier.",
+				"topics": ["Godot", "game jamy"]
+			},
+			{
+				"name": "Mobile",
+				"text": "Programowanie aplikacji mobilnych.",
+				"topics": ["Flutter"]
+			}
+		]
+	},
 	"about": {
 		"title": "Nie tylko studia",
 		"lead": "Koło to miejsce, w którym kod wychodzi poza zajęcia. Uczysz się na prawdziwych projektach, od ludzi, którzy już pracują w branży.",

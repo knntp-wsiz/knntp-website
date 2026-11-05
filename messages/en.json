@@ -54,6 +54,27 @@
 		"latestLabel": "Latest",
 		"latest": "HackYeah 2026: a WSIiZ student won the Smart City category"
 	},
+	"themes": {
+		"title": "Our main themes",
+		"lead": "The club's work will centre on these three topics.",
+		"items": [
+			{
+				"name": "AI",
+				"text": "Learning to code with AI.",
+				"topics": ["Claude Code", "vibecoding", "MCP"]
+			},
+			{
+				"name": "Gamedev",
+				"text": "Programming and making games.",
+				"topics": ["Godot", "game jams"]
+			},
+			{
+				"name": "Mobile",
+				"text": "Programming mobile apps.",
+				"topics": ["Flutter"]
+			}
+		]
+	},
 	"about": {
 		"title": "More than a degree",
 		"lead": "The club is where code goes beyond your classes. You learn on real projects, from people who already work in the industry.",
