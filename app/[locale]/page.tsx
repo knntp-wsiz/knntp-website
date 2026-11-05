@@ -92,6 +92,37 @@ export default async function Home({
 			</section>
 
 			<section
+				id="themes"
+				aria-labelledby="themes-title"
+				className="border-b border-line-soft bg-raised"
+			>
+				<div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+					<h2 id="themes-title" className="text-5xl font-semibold sm:text-6xl">
+						{m.themes.title}
+					</h2>
+					<p className="mt-5 max-w-xl text-lg text-muted">{m.themes.lead}</p>
+					<ul className="mt-14 border-b border-line">
+						{m.themes.items.map((item) => (
+							<li
+								key={item.name}
+								className="grid gap-4 border-t border-line py-8 lg:grid-cols-2 lg:items-baseline lg:gap-12 lg:py-10"
+							>
+								<h3 className="text-7xl font-bold sm:text-8xl">{item.name}</h3>
+								<div>
+									<ul className="flex flex-wrap gap-x-6 gap-y-1 font-display text-3xl font-semibold text-accent sm:text-4xl">
+										{item.topics.map((topic) => (
+											<li key={topic}>{topic}</li>
+										))}
+									</ul>
+									<p className="mt-3 text-lg text-muted">{item.text}</p>
+								</div>
+							</li>
+						))}
+					</ul>
+				</div>
+			</section>
+
+			<section
 				id="about"
 				aria-labelledby="about-title"
 				className="mx-auto max-w-6xl px-4 py-24 sm:px-6"
