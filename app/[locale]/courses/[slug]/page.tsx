@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FiArrowLeft, FiArrowUpRight, FiAward } from "react-icons/fi";
-import { isLocale, LOCALES, type Locale, localePath } from "@/i18n/config";
+
+import { isLocale, type Locale, localePath, LOCALES } from "@/i18n/config";
 import { format, getMessages } from "@/i18n/messages";
 import { COURSES, COURSES_CHECKED, getCourse } from "@/lib/courses";
 import { absolute, alternates, breadcrumbs, openGraph } from "@/lib/seo";
@@ -106,7 +107,7 @@ export default async function CoursePage({ params }: Props) {
 		<article className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
 			<script
 				type="application/ld+json"
-				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD zbudowany z własnych stałych
+				// eslint-disable-next-line react/no-danger -- JSON-LD zbudowany z własnych stałych
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
 			/>
 			<Link

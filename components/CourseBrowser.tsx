@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useId, useMemo, useState } from "react";
 import { FiArrowRight, FiAward } from "react-icons/fi";
+
 import type { Course, CoursePrice } from "@/lib/courses";
 
 export type CourseCard = Course & {
@@ -217,7 +218,7 @@ export default function CourseBrowser({ courses, labels }: Props) {
 			</search>
 
 			<div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2">
-				<p aria-live="polite" className="font-mono text-sm text-muted tabular">
+				<p aria-live="polite" className="tabular font-mono text-sm text-muted">
 					{labels.count
 						.replace("{shown}", String(visible.length))
 						.replace("{total}", String(courses.length))}
@@ -245,7 +246,7 @@ export default function CourseBrowser({ courses, labels }: Props) {
 						<section key={price} className="mt-12">
 							<h2 className="flex items-baseline gap-3 text-4xl font-semibold">
 								{labels.groups[price]}
-								<span className="font-mono text-base text-muted tabular">
+								<span className="tabular font-mono text-base text-muted">
 									{group.length}
 								</span>
 							</h2>
@@ -280,7 +281,7 @@ export default function CourseBrowser({ courses, labels }: Props) {
 										<h3 className="mt-3 text-2xl font-semibold">
 											<Link
 												href={course.href}
-												className="after:absolute after:inset-0 group-hover:text-accent"
+												className="group-hover:text-accent after:absolute after:inset-0"
 											>
 												{course.name}
 											</Link>

@@ -1,0 +1,22 @@
+# https://lefthook.dev/configuration/
+pre-commit:
+  parallel: true
+  jobs:
+    - name: eslint
+      glob: "*.{js,mjs,cjs,ts,tsx}"
+      run: pnpm exec eslint --fix --no-warn-ignored {staged_files}
+      stage_fixed: true
+
+    - name: prettier
+      glob: "*.{js,mjs,cjs,ts,tsx,json,css,md,yml,yaml}"
+      run: pnpm exec prettier --write --ignore-unknown {staged_files}
+      stage_fixed: true
+
+    - name: i18n
+      glob: "{messages/*.json,content/blog/*.md}"
+      run: pnpm lint:i18n
+
+pre-push:
+  jobs:
+    - name: typecheck
+      run: pnpm typecheck

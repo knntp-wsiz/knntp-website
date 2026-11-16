@@ -1,5 +1,6 @@
 import en from "@/messages/en.json";
 import pl from "@/messages/pl.json";
+
 import type { Locale } from "./config";
 
 /** Kształt słownika wynika z pl.json; en.json musi go spełniać (błąd kompilacji przy braku klucza). */

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { LOCALES, type Locale, localePath, OG_LOCALE } from "@/i18n/config";
+
+import { type Locale, localePath, LOCALES, OG_LOCALE } from "@/i18n/config";
 import { SITE_URL } from "@/lib/site";
 
 export function absolute(path: string) {

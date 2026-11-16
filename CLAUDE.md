@@ -4,14 +4,16 @@ Strona koła naukowego KNNTP (WSIiZ Rzeszów), domena knntp.xyz, hosting Vercel.
 
 ## Stack i komendy
 
-Next.js 15 (App Router, Turbopack), React 19, Tailwind v4 (tokeny w `app/globals.css`), Biome, pnpm, TypeScript.
+Next.js 15 (App Router, Turbopack), React 19, Tailwind v4 (tokeny w `app/globals.css`), ESLint + Prettier, lefthook, pnpm, TypeScript.
 
 - `pnpm dev`: serwer deweloperski
-- `pnpm lint` (Biome), `pnpm typecheck`, `pnpm lint:i18n`
+- `pnpm lint` (ESLint z regułami opartymi na typach + `prettier --check`), `pnpm lint:fix`, `pnpm format`, `pnpm typecheck`, `pnpm lint:i18n`
+- lefthook: pre-commit robi ESLint `--fix` i Prettier na zmienionych plikach (plus `lint:i18n` przy zmianie tekstów), pre-push robi `typecheck`. Konfiguracja: `eslint.config.mjs`, `.prettierrc.json`, `lefthook.yml`.
+- Wyjątki od reguł tylko przez `// eslint-disable-next-line <reguła> -- <powód>`. `dangerouslySetInnerHTML` wymaga takiego komentarza (`react/no-danger`).
 - `pnpm build`: uruchamia najpierw `lint:i18n`, potem `next build`
 - `pnpm start -p <port>`: sprawdzanie zbudowanej wersji (po zmianach trzeba przebudować)
 
-Biome i Next potrafią zmienić `postcss.config.mjs` i `tsconfig.json`. Przed commitem cofnij je (`git checkout`). Na Windowsie `git status` pokazuje też szum po końcach linii (CRLF), nie dodawaj tych plików przez `git add -A`.
+Prettier i Next potrafią zmienić `postcss.config.mjs` i `tsconfig.json`. Przed commitem cofnij je (`git checkout`). Na Windowsie `git status` pokazuje też szum po końcach linii (CRLF), nie dodawaj tych plików przez `git add -A`.
 
 ## Zasady, które obowiązują
 

@@ -24,6 +24,7 @@ export default function HeroVideo({ base }: { base: string }) {
 		).connection;
 		if (reduced || connection?.saveData) return;
 		// Telefony dostają lżejszą wersję, reszta pełną.
+		// eslint-disable-next-line react-hooks/set-state-in-effect -- matchMedia istnieje tylko w przeglądarce; odczyt w renderze rozjechałby hydrację
 		setVariant(window.matchMedia("(min-width: 768px)").matches ? "" : "-sm");
 	}, []);
 
@@ -33,7 +34,10 @@ export default function HeroVideo({ base }: { base: string }) {
 		video.muted = true;
 
 		const markReady = () => setReady(true);
-		const play = () => video.play().then(markReady, () => {});
+		const play = () => {
+			// Odrzucone autoplay (np. tryb oszczędzania energii) zostawia samo tło.
+			void video.play().then(markReady, () => undefined);
+		};
 		video.addEventListener("canplay", markReady);
 		video.addEventListener("loadeddata", markReady);
 		video.addEventListener("playing", markReady);

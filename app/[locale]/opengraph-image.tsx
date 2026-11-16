@@ -1,6 +1,8 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
+
 import { ImageResponse } from "next/og";
+
 import { isLocale, LOCALES } from "@/i18n/config";
 import { getMessages } from "@/i18n/messages";
 
@@ -39,7 +41,7 @@ export default async function OpengraphImage({
 				fontFamily: "Barlow Condensed",
 			}}
 		>
-			{/* biome-ignore lint/performance/noImgElement: ImageResponse nie obsługuje next/image */}
+			{/* eslint-disable-next-line @next/next/no-img-element -- ImageResponse nie obsługuje next/image */}
 			<img
 				src={bgSrc}
 				alt=""

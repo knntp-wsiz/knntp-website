@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+
 import { isLocale, type Locale, localePath } from "@/i18n/config";
 import { format, getMessages } from "@/i18n/messages";
 import { getPosts } from "@/lib/blog";
@@ -71,7 +72,7 @@ export default async function BlogIndex({ params }: Props) {
 									<div className="hidden md:block" aria-hidden="true" />
 								)}
 								<div>
-									<p className="font-mono text-sm text-muted tabular">
+									<p className="tabular font-mono text-sm text-muted">
 										<time dateTime={post.date}>
 											{formatDate(post.date, locale)}
 										</time>

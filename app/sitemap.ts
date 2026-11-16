@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { LOCALES, localePath } from "@/i18n/config";
+
+import { localePath, LOCALES } from "@/i18n/config";
 import { allLocalePosts, getAllSlugs } from "@/lib/blog";
 import { COURSES, COURSES_CHECKED } from "@/lib/courses";
 import { absolute } from "@/lib/seo";
@@ -18,7 +19,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		),
 	);
 
-	const latest = posts.map((p) => p.date).sort().at(-1);
+	const latest = posts
+		.map((p) => p.date)
+		.sort()
+		.at(-1);
 
 	const pages = ["/", "/courses", "/blog"].flatMap((path) =>
 		LOCALES.map((locale) => ({

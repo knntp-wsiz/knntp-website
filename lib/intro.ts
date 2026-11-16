@@ -12,14 +12,18 @@ export function hasSeenIntro(): boolean {
 export function markIntroSeen() {
 	try {
 		window.localStorage.setItem(INTRO_KEY, "1");
-	} catch {}
+	} catch {
+		// localStorage niedostępny (tryb prywatny, zablokowane dane): intro zagra ponownie.
+	}
 	document.documentElement.dataset.intro = "seen";
 }
 
 export function resetIntro() {
 	try {
 		window.localStorage.removeItem(INTRO_KEY);
-	} catch {}
+	} catch {
+		// localStorage niedostępny: wystarczy zdjąć atrybut poniżej.
+	}
 	delete document.documentElement.dataset.intro;
 }
 

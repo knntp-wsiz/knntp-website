@@ -1,7 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
+
 import { marked } from "marked";
-import { LOCALES, type Locale } from "@/i18n/config";
+
+import { type Locale, LOCALES } from "@/i18n/config";
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 
@@ -26,7 +28,7 @@ const REQUIRED = ["title", "description", "date"] as const;
 
 /** Prosty parser frontmattera: `klucz: wartość` między liniami `---`. */
 function parse(raw: string, file: string) {
-	const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+	const match = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/.exec(raw);
 	if (!match) throw new Error(`Brak frontmattera w ${file}`);
 	const data: Record<string, string> = {};
 	for (const line of match[1].split(/\r?\n/)) {
@@ -64,7 +66,7 @@ function read(slug: string, locale: Locale): Post | null {
 		sourceName: data.sourceName,
 		photoCredit: data.photoCredit,
 		readingMinutes: Math.max(1, Math.round(words / 200)),
-		html: marked.parse(body, { async: false }) as string,
+		html: marked.parse(body, { async: false }),
 	};
 }
 
@@ -72,7 +74,7 @@ export function getAllSlugs(): string[] {
 	if (!fs.existsSync(BLOG_DIR)) return [];
 	const slugs = new Set<string>();
 	for (const name of fs.readdirSync(BLOG_DIR)) {
-		const m = name.match(/^(.+)\.(pl|en)\.md$/);
+		const m = /^(.+)\.(pl|en)\.md$/.exec(name);
 		if (m) slugs.add(m[1]);
 	}
 	return [...slugs];
