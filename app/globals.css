@@ -40,9 +40,23 @@ html {
 	scroll-padding-top: 5rem;
 }
 
+/*
+ * Strona główna: sekcje lekko "łapią" przewijanie. Proximity zamiast mandatory,
+ * żeby długie sekcje (oś czasu wydarzeń) nie blokowały swobodnego scrolla.
+ * Włączone tylko tam, gdzie jest sekcja #about (czyli na stronie głównej).
+ */
+html:has(main > #about) {
+	scroll-snap-type: y proximity;
+}
+
+main > section {
+	scroll-snap-align: start;
+}
+
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
+		scroll-snap-type: none !important;
 	}
 }
 
