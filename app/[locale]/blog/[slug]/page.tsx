@@ -3,11 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FiArrowLeft, FiArrowUpRight } from "react-icons/fi";
+
 import {
 	isLocale,
-	LOCALES,
 	type Locale,
 	localePath,
+	LOCALES,
 	OG_LOCALE,
 } from "@/i18n/config";
 import { format, getMessages } from "@/i18n/messages";
@@ -111,7 +112,7 @@ export default async function PostPage({ params }: Props) {
 		<article className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
 			<script
 				type="application/ld+json"
-				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD zbudowany z treści repozytorium
+				// eslint-disable-next-line react/no-danger -- JSON-LD zbudowany z treści repozytorium
 				dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, crumbs]) }}
 			/>
 			<Link
@@ -123,7 +124,7 @@ export default async function PostPage({ params }: Props) {
 			</Link>
 
 			<header className="mt-10 max-w-4xl">
-				<p className="font-mono text-sm text-muted tabular">
+				<p className="tabular font-mono text-sm text-muted">
 					<time dateTime={post.date}>{date}</time>
 					{" / "}
 					{format(m.blog.readingTime, { minutes: post.readingMinutes })}
@@ -153,7 +154,7 @@ export default async function PostPage({ params }: Props) {
 
 			<div
 				className="prose-post mt-12"
-				// biome-ignore lint/security/noDangerouslySetInnerHtml: Markdown z repozytorium, nie od użytkowników
+				// eslint-disable-next-line react/no-danger -- Markdown z repozytorium, nie od użytkowników
 				dangerouslySetInnerHTML={{ __html: post.html }}
 			/>
 

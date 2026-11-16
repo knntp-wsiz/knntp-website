@@ -1,8 +1,11 @@
 import type { NextConfig } from "next";
+
 import { DISCORD_URL, FORM_URL } from "./lib/site";
 
 const nextConfig: NextConfig = {
 	poweredByHeader: false,
+	// Lint działa w `pnpm lint` i w hooku pre-commit, build go nie powtarza.
+	eslint: { ignoreDuringBuilds: true },
 	images: {
 		formats: ["image/avif", "image/webp"],
 	},

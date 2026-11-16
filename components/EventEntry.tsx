@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+
 import { type Locale, localePath } from "@/i18n/config";
 import type { EventEntryData } from "@/lib/events";
 
@@ -45,7 +46,7 @@ export default function EventEntry({ event, text, locale, labels }: Props) {
 
 			<article>
 				<h3 className="text-4xl font-semibold sm:text-5xl">{text.name}</h3>
-				<ul className="mt-4 flex flex-wrap gap-x-6 gap-y-1 font-mono text-sm text-accent tabular">
+				<ul className="tabular mt-4 flex flex-wrap gap-x-6 gap-y-1 font-mono text-sm text-accent">
 					{text.stats.map((stat) => (
 						<li key={stat}>{stat}</li>
 					))}

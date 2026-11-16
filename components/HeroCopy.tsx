@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import { hasSeenIntro, markIntroSeen } from "@/lib/intro";
+
 import { useHeroTyping } from "./HeroTyping";
 
 type Props = {
@@ -23,27 +25,29 @@ export default function HeroCopy({ title, fullName, offer }: Props) {
 	const [active, setActive] = useState(-1);
 	const { finish } = useHeroTyping();
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: teksty są stałe dla danego renderu strony, finish jest stabilne
 	useEffect(() => {
 		const full = texts.map((t) => t.length);
 		if (
 			hasSeenIntro() ||
 			window.matchMedia("(prefers-reduced-motion: reduce)").matches
 		) {
+			// eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage i matchMedia są dostępne dopiero po hydracji
 			setCounts(full);
 			finish();
 			return;
 		}
 
-		let cancelled = false;
+		const controller = new AbortController();
+		// Funkcja, bo TS zawęża odczyt pola i nie widzi zmiany po await.
+		const cancelled = () => controller.signal.aborted;
 		const perChar = 14 + Math.random() * 26;
 		const weights = [3, 0.9, 0.7];
 
-		(async () => {
+		void (async () => {
 			await wait(260 + Math.random() * 520);
-			for (let line = 0; line < texts.length && !cancelled; line++) {
+			for (let line = 0; line < texts.length && !cancelled(); line++) {
 				setActive(line);
-				for (let i = 1; i <= full[line] && !cancelled; i++) {
+				for (let i = 1; i <= full[line] && !cancelled(); i++) {
 					setCounts((prev) => prev.map((c, k) => (k === line ? i : c)));
 					const ch = texts[line][i - 1];
 					const pause = ch === " " ? 0.6 : /[.,:]/.test(ch) ? 3.5 : 1;
@@ -55,14 +59,16 @@ export default function HeroCopy({ title, fullName, offer }: Props) {
 			}
 			finish();
 			await wait(2800);
-			if (cancelled) return;
+			if (cancelled()) return;
 			setActive(-1);
 			markIntroSeen();
 		})();
 
 		return () => {
-			cancelled = true;
+			controller.abort();
 		};
+		// Teksty są stałe dla danego renderu strony, a finish jest stabilne.
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const typed = (line: number) => (
@@ -83,10 +89,10 @@ export default function HeroCopy({ title, fullName, offer }: Props) {
 				</style>
 			</noscript>
 			<h1 id="hero-title" className="hero-shadow">
-				<span className="block text-[clamp(4.5rem,17vw,6rem)] font-bold leading-[0.9] tracking-tight">
+				<span className="block text-[clamp(4.5rem,17vw,6rem)] leading-[0.9] font-bold tracking-tight">
 					{typed(0)}
 				</span>
-				<span className="mx-auto mt-4 block max-w-2xl font-sans text-lg font-normal leading-snug text-muted sm:text-xl">
+				<span className="mx-auto mt-4 block max-w-2xl font-sans text-lg leading-snug font-normal text-muted sm:text-xl">
 					{typed(1)}
 				</span>
 			</h1>

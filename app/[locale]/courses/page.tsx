@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FiArrowDown } from "react-icons/fi";
+
 import CourseBrowser from "@/components/CourseBrowser";
 import DotGrid from "@/components/DotGrid";
 import HeroVideo from "@/components/HeroVideo";

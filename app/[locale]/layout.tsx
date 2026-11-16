@@ -1,3 +1,5 @@
+import "../globals.css";
+
 import type { Metadata, Viewport } from "next";
 import {
 	Barlow_Condensed,
@@ -6,10 +8,10 @@ import {
 } from "next/font/google";
 import { notFound } from "next/navigation";
 import Script from "next/script";
-import "../globals.css";
+
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { isLocale, LOCALES, type Locale } from "@/i18n/config";
+import { isLocale, LOCALES } from "@/i18n/config";
 import { format, getMessages } from "@/i18n/messages";
 import { INTRO_BOOT_SCRIPT } from "@/lib/intro";
 import { alternates, openGraph } from "@/lib/seo";
@@ -96,7 +98,7 @@ export default async function LocaleLayout({
 }) {
 	const { locale } = await params;
 	if (!isLocale(locale)) notFound();
-	const messages = getMessages(locale as Locale);
+	const messages = getMessages(locale);
 
 	const organization = {
 		"@context": "https://schema.org",
@@ -134,17 +136,17 @@ export default async function LocaleLayout({
 				className={`${display.variable} ${body.variable} ${mono.variable} flex min-h-svh flex-col`}
 			>
 				<script
-					// biome-ignore lint/security/noDangerouslySetInnerHtml: stały skrypt z własnego modułu
+					// eslint-disable-next-line react/no-danger -- stały skrypt z własnego modułu
 					dangerouslySetInnerHTML={{ __html: INTRO_BOOT_SCRIPT }}
 				/>
 				<script
 					type="application/ld+json"
-					// biome-ignore lint/security/noDangerouslySetInnerHtml: statyczny JSON-LD zbudowany z własnych stałych
+					// eslint-disable-next-line react/no-danger -- statyczny JSON-LD zbudowany z własnych stałych
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
 				/>
 				<script
 					type="application/ld+json"
-					// biome-ignore lint/security/noDangerouslySetInnerHtml: statyczny JSON-LD zbudowany z własnych stałych
+					// eslint-disable-next-line react/no-danger -- statyczny JSON-LD zbudowany z własnych stałych
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
 				/>
 				{process.env.NODE_ENV === "production" && (
@@ -154,15 +156,15 @@ export default async function LocaleLayout({
 				)}
 				<a
 					href="#main"
-					className="sr-only z-[60] bg-accent px-4 py-2 font-semibold text-on-accent focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+					className="sr-only z-[60] bg-accent px-4 py-2 font-semibold text-on-accent focus:not-sr-only focus:fixed focus:top-4 focus:left-4"
 				>
 					{messages.a11y.skip}
 				</a>
-				<Header locale={locale as Locale} messages={messages} />
+				<Header locale={locale} messages={messages} />
 				<main id="main" className="flex-1">
 					{children}
 				</main>
-				<Footer locale={locale as Locale} messages={messages} />
+				<Footer locale={locale} messages={messages} />
 			</body>
 		</html>
 	);

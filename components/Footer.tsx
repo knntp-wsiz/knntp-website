@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaDiscord, FaGithub } from "react-icons/fa";
+
 import { type Locale, localePath } from "@/i18n/config";
 import type { Messages } from "@/i18n/messages";
 import { DISCORD_URL, GITHUB_ORG_URL } from "@/lib/site";
+
 import ReplayIntro from "./ReplayIntro";
 
 export default function Footer({

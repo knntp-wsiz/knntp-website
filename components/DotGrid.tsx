@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+
 import { hasSeenIntro } from "@/lib/intro";
 
 const GAP = 30;

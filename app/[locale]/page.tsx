@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+
 import DotGrid from "@/components/DotGrid";
 import EventEntry from "@/components/EventEntry";
 import HeroCopy from "@/components/HeroCopy";
@@ -152,7 +153,7 @@ export default async function Home({
 					<ul className="mt-6 grid gap-8 sm:grid-cols-3">
 						{m.about.history.map((entry) => (
 							<li key={entry.name}>
-								<p className="font-mono text-sm text-accent tabular">
+								<p className="tabular font-mono text-sm text-accent">
 									{entry.count}
 								</p>
 								<p className="mt-1 font-display text-3xl font-semibold">
@@ -391,7 +392,7 @@ export default async function Home({
 									>
 										<time
 											dateTime={post.date}
-											className="font-mono text-sm text-muted tabular"
+											className="tabular font-mono text-sm text-muted"
 										>
 											{formatDate(post.date, locale)}
 										</time>

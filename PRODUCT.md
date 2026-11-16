@@ -26,7 +26,7 @@ Run by students at one university in Rzeszów. Community lives on Discord (`/dc`
 
 ## Capabilities and Constraints
 
-- Existing Next.js 15 / React 19 / Tailwind 4 app, deployed on Vercel; Biome for formatting; pnpm.
+- Existing Next.js 15 / React 19 / Tailwind 4 app, deployed on Vercel; ESLint + Prettier for linting and formatting; pnpm.
 - Current pages: home (logos plus social links) and `/dc` redirect to Discord. Header nav has one item.
 - Language: Polish only (`lang="pl"`). Domain: knntp.pl.
 - Light and dark themes both exist and must keep working.

@@ -13,7 +13,8 @@ type HeroTypingState = { done: boolean; finish: () => void };
 
 const HeroTypingContext = createContext<HeroTypingState>({
 	done: true,
-	finish: () => {},
+	// Poza providerem nie ma czego kończyć.
+	finish: () => undefined,
 });
 
 /** Łączy pisany tekst hero z elementami, które mają się pojawić dopiero po jego napisaniu. */

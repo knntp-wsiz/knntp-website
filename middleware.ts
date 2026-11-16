@@ -1,9 +1,10 @@
 import { type NextRequest, NextResponse } from "next/server";
+
 import {
 	DEFAULT_LOCALE,
 	isLocale,
-	LOCALE_COOKIE,
 	type Locale,
+	LOCALE_COOKIE,
 } from "@/i18n/config";
 
 const COOKIE_OPTIONS = {
