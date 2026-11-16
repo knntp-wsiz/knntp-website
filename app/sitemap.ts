@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { LOCALES, localePath } from "@/i18n/config";
 import { allLocalePosts, getAllSlugs } from "@/lib/blog";
-import { COURSES } from "@/lib/courses";
+import { COURSES, COURSES_CHECKED } from "@/lib/courses";
 import { absolute } from "@/lib/seo";
 
 function languages(path: string) {
@@ -18,9 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		),
 	);
 
+	const latest = posts.map((p) => p.date).sort().at(-1);
+
 	const pages = ["/", "/courses", "/blog"].flatMap((path) =>
 		LOCALES.map((locale) => ({
 			url: absolute(localePath(locale, path)),
+			lastModified: path === "/courses" ? COURSES_CHECKED : latest,
 			changeFrequency: "weekly" as const,
 			priority: path === "/" ? 1 : 0.7,
 			alternates: { languages: languages(path) },
@@ -30,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	const courses = COURSES.flatMap(({ id }) =>
 		LOCALES.map((locale) => ({
 			url: absolute(localePath(locale, `/courses/${id}`)),
+			lastModified: COURSES_CHECKED,
 			changeFrequency: "monthly" as const,
 			priority: 0.5,
 			alternates: { languages: languages(`/courses/${id}`) },

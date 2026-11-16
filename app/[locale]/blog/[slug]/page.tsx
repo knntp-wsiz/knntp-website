@@ -3,10 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FiArrowLeft, FiArrowUpRight } from "react-icons/fi";
-import { isLocale, LOCALES, type Locale, localePath } from "@/i18n/config";
+import {
+	isLocale,
+	LOCALES,
+	type Locale,
+	localePath,
+	OG_LOCALE,
+} from "@/i18n/config";
 import { format, getMessages } from "@/i18n/messages";
 import { allLocalePosts, getPost } from "@/lib/blog";
-import { absolute, alternates } from "@/lib/seo";
+import { absolute, alternates, breadcrumbs } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -34,12 +40,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		alternates: {
 			...alternates(locale, path),
 			// hreflang tylko dla wersji, które istnieją.
-			languages: Object.fromEntries(
-				[locale, ...other].map((code) => [
-					code,
-					absolute(localePath(code, path)),
-				]),
-			),
+			languages: {
+				...Object.fromEntries(
+					[locale, ...other].map((code) => [
+						code,
+						absolute(localePath(code, path)),
+					]),
+				),
+				...(other.length === LOCALES.length - 1
+					? { "x-default": absolute(localePath("pl", path)) }
+					: {}),
+			},
 		},
 		openGraph: {
 			type: "article",
@@ -47,7 +58,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			description: post.description,
 			url: absolute(localePath(locale, path)),
 			siteName: meta.siteName,
+			locale: OG_LOCALE[locale],
 			publishedTime: post.date,
+			modifiedTime: post.date,
 			images: post.cover
 				? [{ url: post.cover, alt: post.coverAlt ?? post.title }]
 				: undefined,
@@ -76,6 +89,7 @@ export default async function PostPage({ params }: Props) {
 		headline: post.title,
 		description: post.description,
 		datePublished: post.date,
+		dateModified: post.date,
 		inLanguage: locale,
 		mainEntityOfPage: absolute(localePath(locale, `/blog/${slug}`)),
 		image: post.cover ? `${SITE_URL}${post.cover}` : undefined,
@@ -87,12 +101,18 @@ export default async function PostPage({ params }: Props) {
 		},
 	};
 
+	const crumbs = breadcrumbs(locale, [
+		{ name: m.meta.siteName, path: "/" },
+		{ name: m.blog.title, path: "/blog" },
+		{ name: post.title, path: `/blog/${slug}` },
+	]);
+
 	return (
 		<article className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
 			<script
 				type="application/ld+json"
 				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD zbudowany z treści repozytorium
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+				dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, crumbs]) }}
 			/>
 			<Link
 				href={localePath(locale, "/blog")}

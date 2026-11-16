@@ -19,6 +19,23 @@ export function alternates(locale: Locale, path = "/"): Metadata["alternates"] {
 	};
 }
 
+/** BreadcrumbList JSON-LD; ścieżki podajemy bez prefiksu języka. */
+export function breadcrumbs(
+	locale: Locale,
+	items: { name: string; path: string }[],
+) {
+	return {
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		itemListElement: items.map((item, index) => ({
+			"@type": "ListItem",
+			position: index + 1,
+			name: item.name,
+			item: absolute(localePath(locale, item.path)),
+		})),
+	};
+}
+
 export function openGraph(
 	locale: Locale,
 	path: string,

@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+/** 404 ma jedną, jednoznaczną dyrektywę noindex i żadnego canonicala na stronę główną. */
+export const metadata: Metadata = {
+	title: "404",
+	robots: { index: false, follow: false },
+	alternates: { canonical: null },
+	openGraph: null,
+};
 
 /** Wersja dwujęzyczna, bo not-found nie dostaje parametru języka. */
 export default function NotFound() {

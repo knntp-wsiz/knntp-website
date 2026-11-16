@@ -5,7 +5,7 @@ import { FiArrowLeft, FiArrowUpRight, FiAward } from "react-icons/fi";
 import { isLocale, LOCALES, type Locale, localePath } from "@/i18n/config";
 import { format, getMessages } from "@/i18n/messages";
 import { COURSES, COURSES_CHECKED, getCourse } from "@/lib/courses";
-import { alternates, openGraph } from "@/lib/seo";
+import { absolute, alternates, breadcrumbs, openGraph } from "@/lib/seo";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -84,8 +84,31 @@ export default async function CoursePage({ params }: Props) {
 		[detail.checked, COURSES_CHECKED],
 	];
 
+	const jsonLd = [
+		{
+			"@context": "https://schema.org",
+			"@type": "Course",
+			name: course.name,
+			description: text.summary,
+			url: absolute(localePath(locale, `/courses/${slug}`)),
+			inLanguage: locale,
+			provider: { "@type": "Organization", name: course.provider },
+			isAccessibleForFree: course.price === "free",
+		},
+		breadcrumbs(locale, [
+			{ name: m.meta.siteName, path: "/" },
+			{ name: courses.title, path: "/courses" },
+			{ name: course.name, path: `/courses/${slug}` },
+		]),
+	];
+
 	return (
 		<article className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+			<script
+				type="application/ld+json"
+				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD zbudowany z własnych stałych
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+			/>
 			<Link
 				href={localePath(locale, "/courses")}
 				className="inline-flex items-center gap-2 font-mono text-sm text-muted hover:text-text"

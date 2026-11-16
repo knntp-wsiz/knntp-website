@@ -119,6 +119,15 @@ export default async function LocaleLayout({
 		sameAs: [DISCORD_URL, GITHUB_ORG_URL],
 	};
 
+	const website = {
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		name: messages.meta.siteName,
+		url: SITE_URL,
+		inLanguage: locale,
+		publisher: { "@type": "Organization", name: messages.meta.siteName },
+	};
+
 	return (
 		<html lang={locale} suppressHydrationWarning>
 			<body
@@ -132,6 +141,11 @@ export default async function LocaleLayout({
 					type="application/ld+json"
 					// biome-ignore lint/security/noDangerouslySetInnerHtml: statyczny JSON-LD zbudowany z własnych stałych
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
+				/>
+				<script
+					type="application/ld+json"
+					// biome-ignore lint/security/noDangerouslySetInnerHtml: statyczny JSON-LD zbudowany z własnych stałych
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
 				/>
 				{process.env.NODE_ENV === "production" && (
 					<Script id="ms-clarity" strategy="afterInteractive">
